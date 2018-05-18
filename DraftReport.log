@@ -1,0 +1,1054 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.2)  18 MAY 2018 13:09
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**DraftReport.tex
+(./DraftReport.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks21
+\float@box=\box28
+\@float@everytoks=\toks22
+\@floatcapt=\box29
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen114
+\captionmargin@=\dimen115
+\captionwidth=\dimen116
+\caption@tempdima=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
+)
+\c@ContinuedFloat=\count101
+Package caption Info: float package is loaded.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count102
+\c@subtable=\count103
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count104
+\Gm@cntv=\count105
+\c@Gm@tempcnt=\count106
+\Gm@bindingoffset=\dimen121
+\Gm@wd@mp=\dimen122
+\Gm@odd@mp=\dimen123
+\Gm@even@mp=\dimen124
+\Gm@layoutwidth=\dimen125
+\Gm@layoutheight=\dimen126
+\Gm@layouthoffset=\dimen127
+\Gm@layoutvoffset=\dimen128
+\Gm@dimlist=\toks23
+)
+(./DraftReport.aux
+
+LaTeX Warning: Label `SemiCap' multiply defined.
+
+)
+\openout1 = `DraftReport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen129
+\scratchbox=\box30
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen130
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks25
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 14.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+[1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[2] [3] [4]
+Overfull \hbox (61.85855pt too wide) in paragraph at lines 133--160
+ [][] 
+ []
+
+<MonAveUni.pdf, id=30, 578.16pt x 433.62pt>
+File: MonAveUni.pdf Graphic file (type pdf)
+ <use MonAveUni.pdf>
+Package pdftex.def Info: MonAveUni.pdf used on input line 171.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+
+<MonAveUniN.pdf, id=31, 578.16pt x 433.62pt>
+File: MonAveUniN.pdf Graphic file (type pdf)
+ <use MonAveUniN.pdf>
+Package pdftex.def Info: MonAveUniN.pdf used on input line 176.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+
+<MonAveBi.pdf, id=32, 578.16pt x 433.62pt>
+File: MonAveBi.pdf Graphic file (type pdf)
+ <use MonAveBi.pdf>
+Package pdftex.def Info: MonAveBi.pdf used on input line 181.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+
+<MonAveBiN.pdf, id=33, 578.16pt x 433.62pt>
+File: MonAveBiN.pdf Graphic file (type pdf)
+ <use MonAveBiN.pdf>
+Package pdftex.def Info: MonAveBiN.pdf used on input line 186.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+
+<MonAveSemi.pdf, id=34, 578.16pt x 433.62pt>
+File: MonAveSemi.pdf Graphic file (type pdf)
+ <use MonAveSemi.pdf>
+Package pdftex.def Info: MonAveSemi.pdf used on input line 191.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+
+<MonAveSemiN.pdf, id=35, 578.16pt x 433.62pt>
+File: MonAveSemiN.pdf Graphic file (type pdf)
+ <use MonAveSemiN.pdf>
+Package pdftex.def Info: MonAveSemiN.pdf used on input line 196.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ [5]
+<mapRainmode.pdf, id=39, 578.16pt x 433.62pt>
+File: mapRainmode.pdf Graphic file (type pdf)
+ <use mapRainmode.pdf>
+Package pdftex.def Info: mapRainmode.pdf used on input line 292.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+
+<mapObs.pdf, id=40, 578.16pt x 433.62pt>
+File: mapObs.pdf Graphic file (type pdf)
+ <use mapObs.pdf>
+Package pdftex.def Info: mapObs.pdf used on input line 300.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+
+<mapObsnorm.pdf, id=41, 578.16pt x 433.62pt>
+File: mapObsnorm.pdf Graphic file (type pdf)
+ <use mapObsnorm.pdf>
+Package pdftex.def Info: mapObsnorm.pdf used on input line 305.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+
+<mapAnMeannorm.pdf, id=42, 578.16pt x 433.62pt>
+File: mapAnMeannorm.pdf Graphic file (type pdf)
+ <use mapAnMeannorm.pdf>
+Package pdftex.def Info: mapAnMeannorm.pdf used on input line 310.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+
+<mapDayMeannorm.pdf, id=43, 578.16pt x 433.62pt>
+File: mapDayMeannorm.pdf Graphic file (type pdf)
+ <use mapDayMeannorm.pdf>
+Package pdftex.def Info: mapDayMeannorm.pdf used on input line 315.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+
+[6 <./MonAveUni.pdf> <./MonAveUniN.pdf> <./MonAveBi.pdf> <./MonAveBiN.pdf> <./M
+onAveSemi.pdf> <./MonAveSemiN.pdf>] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+[8 <./mapRainmode.pdf> <./mapObs.pdf> <./mapObsnorm.pdf> <./mapAnMeannorm.pdf> 
+<./mapDayMeannorm.pdf>] <MonMax.pdf, id=126, 597.23125pt x 420.57124pt>
+File: MonMax.pdf Graphic file (type pdf)
+
+<use MonMax.pdf>
+Package pdftex.def Info: MonMax.pdf used on input line 329.
+(pdftex.def)             Requested size: 472.03123pt x 332.40808pt.
+ [9 <./MonMax.pdf>]
+<UniFitMar.jpg, id=136, 2039.62pt x 1339.0025pt>
+File: UniFitMar.jpg Graphic file (type jpg)
+ <use UniFitMar.jpg>
+Package pdftex.def Info: UniFitMar.jpg used on input line 344.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitApr.jpg, id=137, 2039.62pt x 1339.0025pt>
+File: UniFitApr.jpg Graphic file (type jpg)
+ <use UniFitApr.jpg>
+Package pdftex.def Info: UniFitApr.jpg used on input line 349.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitMay.jpg, id=138, 2039.62pt x 1339.0025pt>
+File: UniFitMay.jpg Graphic file (type jpg)
+ <use UniFitMay.jpg>
+Package pdftex.def Info: UniFitMay.jpg used on input line 360.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitJun.jpg, id=139, 2039.62pt x 1339.0025pt>
+File: UniFitJun.jpg Graphic file (type jpg)
+ <use UniFitJun.jpg>
+Package pdftex.def Info: UniFitJun.jpg used on input line 365.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitJul.jpg, id=140, 2039.62pt x 1339.0025pt>
+File: UniFitJul.jpg Graphic file (type jpg)
+ <use UniFitJul.jpg>
+Package pdftex.def Info: UniFitJul.jpg used on input line 370.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitAug.jpg, id=141, 2039.62pt x 1339.0025pt>
+File: UniFitAug.jpg Graphic file (type jpg)
+ <use UniFitAug.jpg>
+Package pdftex.def Info: UniFitAug.jpg used on input line 375.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitSep.jpg, id=142, 2039.62pt x 1339.0025pt>
+File: UniFitSep.jpg Graphic file (type jpg)
+ <use UniFitSep.jpg>
+Package pdftex.def Info: UniFitSep.jpg used on input line 380.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+
+<UniFitOct.jpg, id=143, 2039.62pt x 1339.0025pt>
+File: UniFitOct.jpg Graphic file (type jpg)
+ <use UniFitOct.jpg>
+Package pdftex.def Info: UniFitOct.jpg used on input line 385.
+(pdftex.def)             Requested size: 236.01561pt x 154.93211pt.
+ [10 <./UniFitMar.jpg> <./UniFitApr.jpg>]
+<UniFitMar70.jpg, id=147, 2039.62pt x 1339.0025pt>
+File: UniFitMar70.jpg Graphic file (type jpg)
+ <use UniFitMar70.jpg>
+Package pdftex.def Info: UniFitMar70.jpg used on input line 395.
+(pdftex.def)             Requested size: 188.8096pt x 123.93752pt.
+
+<UniFitJul120.jpg, id=148, 2039.62pt x 1339.0025pt>
+File: UniFitJul120.jpg Graphic file (type jpg)
+ <use UniFitJul120.jpg>
+Package pdftex.def Info: UniFitJul120.jpg used on input line 400.
+(pdftex.def)             Requested size: 188.8096pt x 123.93752pt.
+
+<UniFitSep100.jpg, id=149, 2039.62pt x 1339.0025pt>
+File: UniFitSep100.jpg Graphic file (type jpg)
+ <use UniFitSep100.jpg>
+Package pdftex.def Info: UniFitSep100.jpg used on input line 405.
+(pdftex.def)             Requested size: 188.8096pt x 123.93752pt.
+
+<UniFitOct100.jpg, id=150, 2039.62pt x 1339.0025pt>
+File: UniFitOct100.jpg Graphic file (type jpg)
+ <use UniFitOct100.jpg>
+Package pdftex.def Info: UniFitOct100.jpg used on input line 410.
+(pdftex.def)             Requested size: 188.8096pt x 123.93752pt.
+
+[11 <./UniFitMay.jpg> <./UniFitJun.jpg> <./UniFitJul.jpg> <./UniFitAug.jpg> <./
+UniFitSep.jpg> <./UniFitOct.jpg>] <BiFitJan.pdf, id=154, 578.16pt x 433.62pt>
+File: BiFitJan.pdf Graphic file (type pdf)
+
+<use BiFitJan.pdf>
+Package pdftex.def Info: BiFitJan.pdf used on input line 423.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+ <BiFitFeb.pdf, id=155, 578.16pt x 433.62pt>
+File: BiFitFeb.pdf Graphic file (type pdf)
+
+<use BiFitFeb.pdf>
+Package pdftex.def Info: BiFitFeb.pdf used on input line 428.
+(pdftex.def)             Requested size: 188.8096pt x 141.60632pt.
+ <BiFitMar.pdf, id=156, 578.16pt x 433.62pt>
+File: BiFitMar.pdf Graphic file (type pdf)
+
+<use BiFitMar.pdf>
+Package pdftex.def Info: BiFitMar.pdf used on input line 439.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitApr.pdf, id=157, 578.16pt x 433.62pt>
+File: BiFitApr.pdf Graphic file (type pdf)
+
+<use BiFitApr.pdf>
+Package pdftex.def Info: BiFitApr.pdf used on input line 444.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitMay.pdf, id=158, 578.16pt x 433.62pt>
+File: BiFitMay.pdf Graphic file (type pdf)
+
+<use BiFitMay.pdf>
+Package pdftex.def Info: BiFitMay.pdf used on input line 449.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitJun.pdf, id=159, 578.16pt x 433.62pt>
+File: BiFitJun.pdf Graphic file (type pdf)
+
+<use BiFitJun.pdf>
+Package pdftex.def Info: BiFitJun.pdf used on input line 454.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitJul.pdf, id=160, 578.16pt x 433.62pt>
+File: BiFitJul.pdf Graphic file (type pdf)
+
+<use BiFitJul.pdf>
+Package pdftex.def Info: BiFitJul.pdf used on input line 459.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitAug.pdf, id=161, 578.16pt x 433.62pt>
+File: BiFitAug.pdf Graphic file (type pdf)
+
+<use BiFitAug.pdf>
+Package pdftex.def Info: BiFitAug.pdf used on input line 464.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitSep.pdf, id=162, 578.16pt x 433.62pt>
+File: BiFitSep.pdf Graphic file (type pdf)
+
+<use BiFitSep.pdf>
+Package pdftex.def Info: BiFitSep.pdf used on input line 474.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitOct.pdf, id=163, 578.16pt x 433.62pt>
+File: BiFitOct.pdf Graphic file (type pdf)
+
+<use BiFitOct.pdf>
+Package pdftex.def Info: BiFitOct.pdf used on input line 479.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitNov.pdf, id=164, 578.16pt x 433.62pt>
+File: BiFitNov.pdf Graphic file (type pdf)
+
+<use BiFitNov.pdf>
+Package pdftex.def Info: BiFitNov.pdf used on input line 483.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <BiFitDec.pdf, id=165, 578.16pt x 433.62pt>
+File: BiFitDec.pdf Graphic file (type pdf)
+
+<use BiFitDec.pdf>
+Package pdftex.def Info: BiFitDec.pdf used on input line 487.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ [12 <./UniFitMar70.jpg> <./UniFitJul120.jpg> <./UniFitSep100.jpg> <./UniFitOct
+100.jpg> <./BiFitJan.pdf> <./BiFitFeb.pdf>] [13 <./BiFitMar.pdf> <./BiFitApr.pd
+f> <./BiFitMay.pdf> <./BiFitJun.pdf> <./BiFitJul.pdf> <./BiFitAug.pdf>] <FitBiM
+ar80.pdf, id=222, 505.89pt x 361.35pt>
+File: FitBiMar80.pdf Graphic file (type pdf)
+ <use FitBiMar80.pdf>
+Package pdftex.def Info: FitBiMar80.pdf used on input line 498.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<FitBiJun150.pdf, id=223, 505.89pt x 361.35pt>
+File: FitBiJun150.pdf Graphic file (type pdf)
+ <use FitBiJun150.pdf>
+Package pdftex.def Info: FitBiJun150.pdf used on input line 503.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<FitBiJulWei.pdf, id=224, 505.89pt x 361.35pt>
+File: FitBiJulWei.pdf Graphic file (type pdf)
+ <use FitBiJulWei.pdf>
+Package pdftex.def Info: FitBiJulWei.pdf used on input line 514.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<FitBiAugWei.pdf, id=225, 505.89pt x 361.35pt>
+File: FitBiAugWei.pdf Graphic file (type pdf)
+ <use FitBiAugWei.pdf>
+Package pdftex.def Info: FitBiAugWei.pdf used on input line 519.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<FitBiSep90.pdf, id=226, 505.89pt x 361.35pt>
+File: FitBiSep90.pdf Graphic file (type pdf)
+ <use FitBiSep90.pdf>
+Package pdftex.def Info: FitBiSep90.pdf used on input line 524.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<FitBiOct90.pdf, id=227, 505.89pt x 361.35pt>
+File: FitBiOct90.pdf Graphic file (type pdf)
+ <use FitBiOct90.pdf>
+Package pdftex.def Info: FitBiOct90.pdf used on input line 529.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+ [14 <./BiFitSep.pdf> <./BiFitOct.pdf> <./BiFitNov.pdf> <./BiFitDec.pdf>] [15 <
+./FitBiMar80.pdf> <./FitBiJun150.pdf> <./FitBiJulWei.pdf> <./FitBiAugWei.pdf> <
+./FitBiSep90.pdf> <./FitBiOct90.pdf>] <SemiFitJan.pdf, id=294, 578.16pt x 433.6
+2pt>
+File: SemiFitJan.pdf Graphic file (type pdf)
+
+<use SemiFitJan.pdf>
+Package pdftex.def Info: SemiFitJan.pdf used on input line 544.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitFeb.pdf, id=295, 578.16pt x 433.62pt>
+File: SemiFitFeb.pdf Graphic file (type pdf)
+
+<use SemiFitFeb.pdf>
+Package pdftex.def Info: SemiFitFeb.pdf used on input line 549.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitMar.pdf, id=296, 578.16pt x 433.62pt>
+File: SemiFitMar.pdf Graphic file (type pdf)
+
+<use SemiFitMar.pdf>
+Package pdftex.def Info: SemiFitMar.pdf used on input line 554.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitApr.pdf, id=297, 578.16pt x 433.62pt>
+File: SemiFitApr.pdf Graphic file (type pdf)
+
+<use SemiFitApr.pdf>
+Package pdftex.def Info: SemiFitApr.pdf used on input line 559.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitMay.pdf, id=298, 578.16pt x 433.62pt>
+File: SemiFitMay.pdf Graphic file (type pdf)
+
+<use SemiFitMay.pdf>
+Package pdftex.def Info: SemiFitMay.pdf used on input line 570.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitJun.pdf, id=299, 578.16pt x 433.62pt>
+File: SemiFitJun.pdf Graphic file (type pdf)
+
+<use SemiFitJun.pdf>
+Package pdftex.def Info: SemiFitJun.pdf used on input line 575.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitJul.pdf, id=300, 578.16pt x 433.62pt>
+File: SemiFitJul.pdf Graphic file (type pdf)
+
+<use SemiFitJul.pdf>
+Package pdftex.def Info: SemiFitJul.pdf used on input line 580.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitAug.pdf, id=301, 578.16pt x 433.62pt>
+File: SemiFitAug.pdf Graphic file (type pdf)
+
+<use SemiFitAug.pdf>
+Package pdftex.def Info: SemiFitAug.pdf used on input line 585.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitSep.pdf, id=302, 578.16pt x 433.62pt>
+File: SemiFitSep.pdf Graphic file (type pdf)
+
+<use SemiFitSep.pdf>
+Package pdftex.def Info: SemiFitSep.pdf used on input line 590.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitOct.pdf, id=303, 578.16pt x 433.62pt>
+File: SemiFitOct.pdf Graphic file (type pdf)
+
+<use SemiFitOct.pdf>
+Package pdftex.def Info: SemiFitOct.pdf used on input line 595.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitNov.pdf, id=304, 578.16pt x 433.62pt>
+File: SemiFitNov.pdf Graphic file (type pdf)
+
+<use SemiFitNov.pdf>
+Package pdftex.def Info: SemiFitNov.pdf used on input line 604.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ <SemiFitDec.pdf, id=305, 578.16pt x 433.62pt>
+File: SemiFitDec.pdf Graphic file (type pdf)
+
+<use SemiFitDec.pdf>
+Package pdftex.def Info: SemiFitDec.pdf used on input line 608.
+(pdftex.def)             Requested size: 236.01561pt x 177.01122pt.
+ [16 <./SemiFitJan.pdf> <./SemiFitFeb.pdf> <./SemiFitMar.pdf> <./SemiFitApr.pdf
+>] [17 <./SemiFitMay.pdf> <./SemiFitJun.pdf> <./SemiFitJul.pdf> <./SemiFitAug.p
+df> <./SemiFitSep.pdf> <./SemiFitOct.pdf>]
+<SemiFitJan70.pdf, id=373, 505.89pt x 361.35pt>
+File: SemiFitJan70.pdf Graphic file (type pdf)
+ <use SemiFitJan70.pdf>
+Package pdftex.def Info: SemiFitJan70.pdf used on input line 618.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<SemiFitFeb70.pdf, id=374, 505.89pt x 361.35pt>
+File: SemiFitFeb70.pdf Graphic file (type pdf)
+ <use SemiFitFeb70.pdf>
+Package pdftex.def Info: SemiFitFeb70.pdf used on input line 623.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<SemiFitApr120.pdf, id=375, 505.89pt x 361.35pt>
+File: SemiFitApr120.pdf Graphic file (type pdf)
+ <use SemiFitApr120.pdf>
+Package pdftex.def Info: SemiFitApr120.pdf used on input line 633.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<SemiFitMay130.pdf, id=376, 505.89pt x 361.35pt>
+File: SemiFitMay130.pdf Graphic file (type pdf)
+ <use SemiFitMay130.pdf>
+Package pdftex.def Info: SemiFitMay130.pdf used on input line 638.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+<SemiFitJunWei.pdf, id=377, 505.89pt x 361.35pt>
+File: SemiFitJunWei.pdf Graphic file (type pdf)
+ <use SemiFitJunWei.pdf>
+Package pdftex.def Info: SemiFitJunWei.pdf used on input line 643.
+(pdftex.def)             Requested size: 236.01561pt x 168.5829pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--646
+[]$[]$$[]$
+ []
+
+[18 <./SemiFitNov.pdf> <./SemiFitDec.pdf> <./SemiFitJan70.pdf> <./SemiFitFeb70.
+pdf>] [19 <./SemiFitApr120.pdf> <./SemiFitMay130.pdf> <./SemiFitJunWei.pdf>]
+<PRCPTOTall.pdf, id=427, 597.23125pt x 420.57124pt>
+File: PRCPTOTall.pdf Graphic file (type pdf)
+ <use PRCPTOTall.pdf>
+Package pdftex.def Info: PRCPTOTall.pdf used on input line 662.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<PRCPTOTmodes.pdf, id=428, 597.23125pt x 420.57124pt>
+File: PRCPTOTmodes.pdf Graphic file (type pdf)
+ <use PRCPTOTmodes.pdf>
+Package pdftex.def Info: PRCPTOTmodes.pdf used on input line 667.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<PRCPTOTGCMall.pdf, id=429, 254.9525pt x 100.375pt>
+File: PRCPTOTGCMall.pdf Graphic file (type pdf)
+ <use PRCPTOTGCMall.pdf>
+Package pdftex.def Info: PRCPTOTGCMall.pdf used on input line 672.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<PRCPTOTGCMmean.pdf, id=430, 254.9525pt x 100.375pt>
+File: PRCPTOTGCMmean.pdf Graphic file (type pdf)
+ <use PRCPTOTGCMmean.pdf>
+Package pdftex.def Info: PRCPTOTGCMmean.pdf used on input line 677.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<R1mmall.pdf, id=431, 597.23125pt x 420.57124pt>
+File: R1mmall.pdf Graphic file (type pdf)
+ <use R1mmall.pdf>
+Package pdftex.def Info: R1mmall.pdf used on input line 688.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<R1mmodes.pdf, id=432, 597.23125pt x 420.57124pt>
+File: R1mmodes.pdf Graphic file (type pdf)
+ <use R1mmodes.pdf>
+Package pdftex.def Info: R1mmodes.pdf used on input line 693.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<R1mmGCMall.pdf, id=433, 254.9525pt x 100.375pt>
+File: R1mmGCMall.pdf Graphic file (type pdf)
+ <use R1mmGCMall.pdf>
+Package pdftex.def Info: R1mmGCMall.pdf used on input line 698.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<R1mmGCMmean.pdf, id=434, 254.9525pt x 100.375pt>
+File: R1mmGCMmean.pdf Graphic file (type pdf)
+ <use R1mmGCMmean.pdf>
+Package pdftex.def Info: R1mmGCMmean.pdf used on input line 703.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+[20 <./PRCPTOTall.pdf> <./PRCPTOTmodes.pdf> <./PRCPTOTGCMall.pdf> <./PRCPTOTGCM
+mean.pdf>] <R10mmall.pdf, id=456, 597.23125pt x 420.57124pt>
+File: R10mmall.pdf Graphic file (type pdf)
+
+<use R10mmall.pdf>
+Package pdftex.def Info: R10mmall.pdf used on input line 714.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ <R10mmodes.pdf, id=457, 597.23125pt x 420.57124pt>
+File: R10mmodes.pdf Graphic file (type pdf)
+
+<use R10mmodes.pdf>
+Package pdftex.def Info: R10mmodes.pdf used on input line 719.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ <R10GCMall.pdf, id=458, 254.9525pt x 100.375pt>
+File: R10GCMall.pdf Graphic file (type pdf)
+
+<use R10GCMall.pdf>
+Package pdftex.def Info: R10GCMall.pdf used on input line 724.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ <R10GCMmean.pdf, id=459, 254.9525pt x 100.375pt>
+File: R10GCMmean.pdf Graphic file (type pdf)
+
+<use R10GCMmean.pdf>
+Package pdftex.def Info: R10GCMmean.pdf used on input line 729.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ [21 <./R1mmall.pdf> <./R1mmodes.pdf> <./R1mmGCMall.pdf> <./R1mmGCMmean.pdf>] <
+R20mmall.pdf, id=482, 597.23125pt x 420.57124pt>
+File: R20mmall.pdf Graphic file (type pdf)
+
+<use R20mmall.pdf>
+Package pdftex.def Info: R20mmall.pdf used on input line 740.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ <R20mmodes.pdf, id=483, 597.23125pt x 420.57124pt>
+File: R20mmodes.pdf Graphic file (type pdf)
+
+<use R20mmodes.pdf>
+Package pdftex.def Info: R20mmodes.pdf used on input line 745.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ <R20GCMall.pdf, id=484, 254.9525pt x 100.375pt>
+File: R20GCMall.pdf Graphic file (type pdf)
+
+<use R20GCMall.pdf>
+Package pdftex.def Info: R20GCMall.pdf used on input line 750.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ <R20GCMmean.pdf, id=485, 254.9525pt x 100.375pt>
+File: R20GCMmean.pdf Graphic file (type pdf)
+
+<use R20GCMmean.pdf>
+Package pdftex.def Info: R20GCMmean.pdf used on input line 755.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ [22 <./R10mmall.pdf> <./R10mmodes.pdf> <./R10GCMall.pdf> <./R10GCMmean.pdf>] <
+R95all.pdf, id=507, 597.23125pt x 420.57124pt>
+File: R95all.pdf Graphic file (type pdf)
+
+<use R95all.pdf>
+Package pdftex.def Info: R95all.pdf used on input line 768.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ <R95GCMall.pdf, id=508, 254.9525pt x 100.375pt>
+File: R95GCMall.pdf Graphic file (type pdf)
+
+<use R95GCMall.pdf>
+Package pdftex.def Info: R95GCMall.pdf used on input line 773.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ <R95GCMmean.pdf, id=509, 254.9525pt x 100.375pt>
+File: R95GCMmean.pdf Graphic file (type pdf)
+
+<use R95GCMmean.pdf>
+Package pdftex.def Info: R95GCMmean.pdf used on input line 778.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ [23 <./R20mmall.pdf> <./R20mmodes.pdf> <./R20GCMall.pdf> <./R20GCMmean.pdf>] <
+R99all.pdf, id=531, 597.23125pt x 420.57124pt>
+File: R99all.pdf Graphic file (type pdf)
+
+<use R99all.pdf>
+Package pdftex.def Info: R99all.pdf used on input line 789.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ <R99GCMall.pdf, id=532, 254.9525pt x 100.375pt>
+File: R99GCMall.pdf Graphic file (type pdf)
+
+<use R99GCMall.pdf>
+Package pdftex.def Info: R99GCMall.pdf used on input line 794.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ <R99GCMmean.pdf, id=533, 254.9525pt x 100.375pt>
+File: R99GCMmean.pdf Graphic file (type pdf)
+
+<use R99GCMmean.pdf>
+Package pdftex.def Info: R99GCMmean.pdf used on input line 799.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ [24 <./R95all.pdf> <./R95GCMall.pdf> <./R95GCMmean.pdf>]
+<R1GCM45all.pdf, id=549, 254.9525pt x 100.375pt>
+File: R1GCM45all.pdf Graphic file (type pdf)
+ <use R1GCM45all.pdf>
+Package pdftex.def Info: R1GCM45all.pdf used on input line 813.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<R1GCM45mean.pdf, id=550, 254.9525pt x 100.375pt>
+File: R1GCM45mean.pdf Graphic file (type pdf)
+ <use R1GCM45mean.pdf>
+Package pdftex.def Info: R1GCM45mean.pdf used on input line 818.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<R10GCM45all.pdf, id=551, 254.9525pt x 100.375pt>
+File: R10GCM45all.pdf Graphic file (type pdf)
+ <use R10GCM45all.pdf>
+Package pdftex.def Info: R10GCM45all.pdf used on input line 829.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<R10GCM45mean_long.pdf, id=552, 254.9525pt x 100.375pt>
+File: R10GCM45mean_long.pdf Graphic file (type pdf)
+
+<use R10GCM45mean_long.pdf>
+Package pdftex.def Info: R10GCM45mean_long.pdf used on input line 834.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+ [25 <./R99all.pdf> <./R99GCMall.pdf> <./R99GCMmean.pdf> <./R1GCM45all.pdf> <./
+R1GCM45mean.pdf>]
+<R20GCM45all.pdf, id=575, 254.9525pt x 100.375pt>
+File: R20GCM45all.pdf Graphic file (type pdf)
+ <use R20GCM45all.pdf>
+Package pdftex.def Info: R20GCM45all.pdf used on input line 845.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<R20GCM45mean.pdf, id=576, 254.9525pt x 100.375pt>
+File: R20GCM45mean.pdf Graphic file (type pdf)
+ <use R20GCM45mean.pdf>
+Package pdftex.def Info: R20GCM45mean.pdf used on input line 850.
+(pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
+
+<lowessAp.pdf, id=577, 597.23125pt x 420.57124pt>
+File: lowessAp.pdf Graphic file (type pdf)
+ <use lowessAp.pdf>
+Package pdftex.def Info: lowessAp.pdf used on input line 864.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<lowessRd.pdf, id=578, 597.23125pt x 420.57124pt>
+File: lowessRd.pdf Graphic file (type pdf)
+ <use lowessRd.pdf>
+Package pdftex.def Info: lowessRd.pdf used on input line 869.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<lowessR10.pdf, id=579, 597.23125pt x 420.57124pt>
+File: lowessR10.pdf Graphic file (type pdf)
+ <use lowessR10.pdf>
+Package pdftex.def Info: lowessR10.pdf used on input line 874.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<lowessR20.pdf, id=580, 597.23125pt x 420.57124pt>
+File: lowessR20.pdf Graphic file (type pdf)
+ <use lowessR20.pdf>
+Package pdftex.def Info: lowessR20.pdf used on input line 879.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<lowessR95.pdf, id=581, 597.23125pt x 420.57124pt>
+File: lowessR95.pdf Graphic file (type pdf)
+ <use lowessR95.pdf>
+Package pdftex.def Info: lowessR95.pdf used on input line 884.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<lowessR99.pdf, id=582, 597.23125pt x 420.57124pt>
+File: lowessR99.pdf Graphic file (type pdf)
+ <use lowessR99.pdf>
+Package pdftex.def Info: lowessR99.pdf used on input line 889.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ [26 <./R10GCM45all.pdf> <./R10GCM45mean_long.pdf> <./R20GCM45all.pdf> <./R20GC
+M45mean.pdf>] <extRainRatio95.pdf, id=598, 597.23125pt x 420.57124pt>
+File: extRainRatio95.pdf Graphic file (type pdf)
+
+<use extRainRatio95.pdf>
+Package pdftex.def Info: extRainRatio95.pdf used on input line 901.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<extRainRatio99.pdf, id=599, 597.23125pt x 420.57124pt>
+File: extRainRatio99.pdf Graphic file (type pdf)
+
+<use extRainRatio99.pdf>
+Package pdftex.def Info: extRainRatio99.pdf used on input line 906.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ [27 <./lowessAp.pdf> <./lowessRd.pdf> <./lowessR10.pdf> <./lowessR20.pdf> <./l
+owessR95.pdf> <./lowessR99.pdf>]
+<tsPRCPTOTu.pdf, id=641, 597.23125pt x 420.57124pt>
+File: tsPRCPTOTu.pdf Graphic file (type pdf)
+ <use tsPRCPTOTu.pdf>
+Package pdftex.def Info: tsPRCPTOTu.pdf used on input line 917.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsPRCPTOTb.pdf, id=642, 597.23125pt x 420.57124pt>
+File: tsPRCPTOTb.pdf Graphic file (type pdf)
+ <use tsPRCPTOTb.pdf>
+Package pdftex.def Info: tsPRCPTOTb.pdf used on input line 922.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsPRCPTOTs.pdf, id=643, 597.23125pt x 420.57124pt>
+File: tsPRCPTOTs.pdf Graphic file (type pdf)
+ <use tsPRCPTOTs.pdf>
+Package pdftex.def Info: tsPRCPTOTs.pdf used on input line 927.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR1u.pdf, id=644, 597.23125pt x 420.57124pt>
+File: tsR1u.pdf Graphic file (type pdf)
+ <use tsR1u.pdf>
+Package pdftex.def Info: tsR1u.pdf used on input line 939.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR1b.pdf, id=645, 597.23125pt x 420.57124pt>
+File: tsR1b.pdf Graphic file (type pdf)
+ <use tsR1b.pdf>
+Package pdftex.def Info: tsR1b.pdf used on input line 944.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR1s.pdf, id=646, 597.23125pt x 420.57124pt>
+File: tsR1s.pdf Graphic file (type pdf)
+ <use tsR1s.pdf>
+Package pdftex.def Info: tsR1s.pdf used on input line 949.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR10u.pdf, id=647, 597.23125pt x 420.57124pt>
+File: tsR10u.pdf Graphic file (type pdf)
+ <use tsR10u.pdf>
+Package pdftex.def Info: tsR10u.pdf used on input line 960.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR10b.pdf, id=648, 597.23125pt x 420.57124pt>
+File: tsR10b.pdf Graphic file (type pdf)
+ <use tsR10b.pdf>
+Package pdftex.def Info: tsR10b.pdf used on input line 965.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR10s.pdf, id=649, 597.23125pt x 420.57124pt>
+File: tsR10s.pdf Graphic file (type pdf)
+ <use tsR10s.pdf>
+Package pdftex.def Info: tsR10s.pdf used on input line 970.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+ [28 <./extRainRatio95.pdf> <./extRainRatio99.pdf> <./tsPRCPTOTu.pdf> <./tsPRCP
+TOTb.pdf> <./tsPRCPTOTs.pdf> <./tsR1u.pdf> <./tsR1b.pdf> <./tsR1s.pdf>]
+<tsR20u.pdf, id=701, 597.23125pt x 420.57124pt>
+File: tsR20u.pdf Graphic file (type pdf)
+ <use tsR20u.pdf>
+Package pdftex.def Info: tsR20u.pdf used on input line 981.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR20b.pdf, id=702, 597.23125pt x 420.57124pt>
+File: tsR20b.pdf Graphic file (type pdf)
+ <use tsR20b.pdf>
+Package pdftex.def Info: tsR20b.pdf used on input line 986.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+
+<tsR20s.pdf, id=703, 597.23125pt x 420.57124pt>
+File: tsR20s.pdf Graphic file (type pdf)
+ <use tsR20s.pdf>
+Package pdftex.def Info: tsR20s.pdf used on input line 991.
+(pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+ [29 <./tsR10u.pdf> <./tsR10b.pdf> <./tsR10s.pdf> <./tsR20u.pdf> <./tsR20b.pdf>
+ <./tsR20s.pdf>] [30] (./DraftReport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4674 strings out of 492995
+ 70489 string characters out of 6132704
+ 151109 words of memory out of 5000000
+ 8048 multiletter control sequences out of 15000+600000
+ 14136 words of font info for 59 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,11n,39p,1853b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on DraftReport.pdf (30 pages, 15129446 bytes).
+PDF statistics:
+ 804 PDF objects out of 1000 (max. 8388607)
+ 555 compressed objects within 6 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 536 words of extra memory for PDF output out of 10000 (max. 10000000)
+
