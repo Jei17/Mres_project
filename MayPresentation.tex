@@ -1,0 +1,361 @@
+\documentclass{beamer}
+\usetheme{Singapore}
+\title{Rainfall in Ghana}
+\subtitle{A story about extremes}
+\author{Jennifer Israelsson}
+\institute{University of Reading}
+\date{\today}
+
+\begin{document}
+	\begin{frame}
+	\titlepage
+	\end{frame}
+
+\section{Background}
+
+ \begin{frame}
+ \frametitle{Ghana}
+ \begin{columns}
+ 	\column{0.5\textwidth}
+ 	\begin{itemize}
+ 		\item 4-11$^{\circ}$ N, 3$^{\circ}$W to 1$^{\circ}$E
+ 		\item Biggest export is agriculture, such as:
+ 		\begin{itemize}
+ 			\item Cacao
+ 			\item Lemons
+ 			\item Tea
+ 	\end{itemize}
+ 	\item Rain depends on the  west African monsoon, controlled by the \textbf{ITCZ} and \textbf{Harmattan}.
+ 	\item We have 30 years of daily rainfall data from 16 stations
+ 	\end{itemize}
+ 	\column{0.5\textwidth}
+ 	\begin{figure}
+ 	\includegraphics[width=\linewidth]{ghana-map.jpg}
+ 	\caption{Map of Africa. https://www.vecteezy.com}
+ \end{figure}
+ \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Inter-tropical convergence zone}
+\begin{itemize}
+	\item Moves from south of Africa northward to 15$^{\circ}$N in the northern hemisphere summer because of a thermal low pressure.
+	\item Cold water is moving northward along the south-west African coast
+	\item Pressure gradient between South Atlantic and north Africa which brings cold and moist air, this is the west African monsoon.
+	\item Harmattan is when during the northern hemisphere winter, dry and dusty air comes from Sahara.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Rain patterns}
+\begin{figure}
+	\includegraphics[width=\linewidth]{mapRainmode2.jpg}
+\end{figure}
+\end{frame}
+
+\section{Distribution fit}
+
+\begin{frame}
+\frametitle{Previous used distributions}
+\begin{itemize}
+	\item Gamma distribution :
+	\begin{equation*}
+	f(x ; \alpha, \theta) = \frac{x^{\alpha-1} e^{-\frac{x}{\theta}}}{\theta^\alpha \Gamma(\alpha)}, \ x > 0
+	\end{equation*}
+	\item Lognormal :
+	\begin{equation*}
+	f(x ; \mu, \sigma)  = \frac{1}{x\sigma \sqrt{2\pi}} e^{- \frac{(ln x - \mu)^2}{2 \sigma ^2}}, \  x > 0
+	\end{equation*}
+	\item Exponential :
+	\begin{equation*}
+	f(x ; \lambda) = \lambda e^{-\lambda x}, \  x> 0
+	\end{equation*}
+	\item Weibull (extreme value) :
+	\begin{equation*}
+	f(x ; k, \lambda) = \frac{k}{\lambda}\left(\frac{x}{\lambda}\right)^{k-1}e^{(-x/ \lambda)^k}, \ x> 0
+	\end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{More rain modelling}
+\begin{itemize}
+	\item Model occurence
+	\begin{itemize}
+		\item Binomial to model occurence, p mean value of proportion of rainy days in month and location.
+		\item Markov chain if we want to model the rainpatterns of a certain length in each month and location.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fitting distributions}
+\begin{itemize}
+	\item Used Gamma distribution as first attempt for all months with enough data.
+	\begin{itemize}
+		\item Excluded December, January, February for north stations.	
+	\end{itemize}
+	\item \textbf{MLE} method to fit the disribution because it minimizes the variance.
+	\item \textbf{QQ plots} to judge how well it fits the distribution.
+	\item If a poor fit, tried the other commonly used distributions.
+	\item If a good fit for most of the data, tried to cap of the most extreme observations.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fitting distributions}
+\begin{figure}
+	\includegraphics[scale=0.12]{UniFitJun.jpg}
+	\caption{June for uni mode stations.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fitting distributions, capped}
+\begin{columns}
+	\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{UniFitJul.jpg}
+	\caption{July for uni mode stations, all data points.}
+\end{figure}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{UniFitJul120.jpg}
+	\caption{July for uni mode stations, capped at 120.}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fitting distributions, Weibull}
+\begin{columns}
+	\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[scale=0.3]{BiFitAug.pdf}
+	\caption{August for bi mode stations, Gamma.}
+\end{figure}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[scale=0.3]{FitBiAugWei.pdf}
+	\caption{August for bi mode stations, Weibull.}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Goodness-of-fit}
+\begin{itemize}
+	\item Statistical tests to quantify how good or poor fit the chosen distribution is to our data.
+	\item GoF test :
+	\begin{itemize}
+		\item \textbf{Kolmogorov-Smirnov:} 
+		\begin{equation*}
+		D_n = sup_x |F_n(x) - F(x)|
+		\end{equation*}
+		\item \textbf{Anderson-Darling:} The test statistics, A, of our ordered data ${x_1, x_2, ..., x_n}$, is defined as,
+		\begin{equation*}
+		A^2 = -n - S
+		\end{equation*}
+		where
+		\begin{equation*}
+		S = \sum_{i=1}^n\frac{2i -1}{n}[\text{ln}(F(x_i)) + \text{ln}(1 - F(x_{n+1-i}) )]
+		\end{equation*}
+		\item \textbf{Cram\'{e}r-von Mises:} Ordered data ${x_1, x_2,...,x_n}$ ,
+		\begin{equation*}
+		T = \frac{1}{12n} + \sum_{i=1}^{n}\left[\frac{2i-1}{2n} - F(x_i)\right]^2
+		\end{equation*}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Comparing data with CMIP5}
+
+\begin{frame}
+\frametitle{Extreme inidicies}
+\begin{itemize}
+	\item 27 extreme indices set by the \textbf{ETCCDI} (Expert Team on Climate Change Detection and Indices) on temperature and precipitation.
+	\item Days with less then 1 mm of rain are classified as dry days.
+	\item Mixture of absolute, threshold, duration and percentile indicies. 
+	\item Looked at so far:
+	\begin{itemize}
+		\item \textbf{PRCPTOT :} Total wet day precipitation.
+		\item \textbf{R1mm: } Number of wet days.
+		\item \textbf{R10mm\textbackslash R20mm:} Number of days with more than 10\textbackslash 20 mm rain.
+		\item \textbf{R95p \textbackslash R99p:} Total amount of rain on days with rain above 95 \textbackslash 99 percentile value in reference period.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Absolute indicies, PRCPTOT}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{lowessAp.pdf}
+		\caption{Average of all the stations}
+	\end{figure}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{PRCPTOTmodes.pdf}
+	\caption{Avergage within each group}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Absolute indicies, PRCPTOT}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{PRCPTOTGCMall.pdf}
+		\caption{All CMIP5 models}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{PRCPTOTGCMmean.pdf}
+		\caption{CMIP5 model mean}
+	\end{figure}
+\end{columns}
+Simluates too many days of rain (about 100 days more then our data).
+\end{frame}
+
+\begin{frame}
+\frametitle{Threshold indicies, R10}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{lowessR10.pdf}
+		\caption{Average of all the stations}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{R10mmodes.pdf}
+		\caption{Average within each group}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Threshold indicies, R10}
+\begin{columns}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{R10GCMall.pdf}
+	\caption{All CMIP5 models}
+\end{figure}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{R10GCMmean.pdf}
+	\caption{CMIP5 model mean}
+\end{figure}
+\end{columns}
+Performs resonably well, the mean curve is only slightly over the data mean, but the spread is still massive.
+\end{frame}
+
+\begin{frame}
+\frametitle{Threshold indicies, R20}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{lowessR20.pdf}
+		\caption{Average of all the stations}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{R20mmodes.pdf}
+		\caption{Average within each group}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Threshold indicies, R20}
+\begin{columns}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{R20GCMall.pdf}
+	\caption{All CMIP5 models}
+\end{figure}
+\column{0.5\linewidth}
+\begin{figure}
+	\includegraphics[width=\linewidth]{R20GCMmean.pdf}
+	\caption{CMIP5 model mean}
+\end{figure}
+\end{columns}
+Opposite issue, the models simulates too few days instead.
+\end{frame}
+
+\begin{frame}
+\frametitle{Percentile indicies}
+\begin{itemize}
+	\item CMIP5 uses 1961-1990 as reference period. 
+	\item For my analyses I picked 1984-1993.
+	\item To test that the percentile values are robust, calculated 95\% confidence interval using bootstrap method with 5000 samples maximum value included.
+	\item 95\% value between (46.2, 48.8).
+	\item 99\% value between  (79.3, 88.6).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Percentile indicies, R95p}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{lowessR95.pdf}
+		\caption{Mean of all data}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{R95GCMmean.pdf}
+		\caption{CMIP5 model mean}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Percentile indicies, R99p}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{lowessR99.pdf}
+		\caption{Mean of all data}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{R99GCMmean.pdf}
+		\caption{CMIP5 model mean}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{Future work}
+
+\begin{frame}
+\frametitle{Extreme value statistics}
+\begin{itemize}
+	\item In extreme value analysis, there can be natural truncation points, but in some cases the data deviates from the Pareto distribution because or data is truncated by other factors e.g rain gauges are too small or a flood barrier is too low. 
+	\item Need tools to both investigate if data is truncated and to reconstruct the non-truncated distribution.
+	\item These methods can also be used to find the right end point (max value) of the distribution.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Truncations}
+There are two types of truncations, rough and light. Define t to be the point from which all values to the right follows a Pareto distribution and T to be the truncation value and t,T $\rightarrow \infty$ as n $\rightarrow \infty$
+\begin{itemize}
+	\item \textbf{Rough truncation:} $T_n / t_n \rightarrow \beta > 1 $
+	\item \textbf{Light truncation:} $T_n / t_n \rightarrow \infty$
+\end{itemize}
+Tests have been developed to test if T = $\infty$ or finite and to test for light or rough truncation. One can then use TPa (truncated pareto) QQ-plots to graphically investigate if it is a good fit. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Application}
+We will use this theory to:
+\begin{itemize}
+	\item Investigate if our data is truncated, and in that case try to reconstruct the underlying distribution.
+	\item Try and find a right end point on daily rainfall, initially over Ghana, but then apply it to all of Africa to see how it might differ depending on location.
+\end{itemize}
+\end{frame}
+
+\end{document}

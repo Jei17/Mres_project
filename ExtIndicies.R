@@ -1,5 +1,10 @@
 ano = seq(1983,2012)
 
+y8392 <- subset(dataNew.norm, substr(dataNew.norm$Date, 1,4)==1983|substr(dataNew.norm$Date, 1,4)==1984|substr(dataNew.norm$Date, 1,4)==1985|substr(dataNew.norm$Date, 1,4)==1986|substr(dataNew.norm$Date, 1,4)==1987|substr(dataNew.norm$Date, 1,4)==1988|substr(dataNew.norm$Date, 1,4)==1989|substr(dataNew.norm$Date, 1,4)==1990|substr(dataNew.norm$Date, 1,4)==1991|substr(dataNew.norm$Date, 1,4)==1992)
+y9302 <- subset(dataNew.norm, substr(dataNew.norm$Date, 1, 4)==1993|substr(dataNew.norm$Date, 1, 4)==1994|substr(dataNew.norm$Date, 1, 4)==1995|substr(dataNew.norm$Date, 1, 4)==1996|substr(dataNew.norm$Date, 1, 4)==1997|substr(dataNew.norm$Date, 1, 4)==1998|substr(dataNew.norm$Date, 1, 4)==1999|substr(dataNew.norm$Date, 1, 4)==2000|substr(dataNew.norm$Date, 1, 4)==2001|substr(dataNew.norm$Date, 1, 4)==2002)
+y0312 <- subset(dataNew.norm, substr(dataNew.norm$Date, 1, 4)==2003|substr(dataNew.norm$Date, 1, 4)==2004|substr(dataNew.norm$Date, 1, 4)==2005|substr(dataNew.norm$Date, 1, 4)==2006|substr(dataNew.norm$Date, 1, 4)==2007|substr(dataNew.norm$Date, 1, 4)==2008|substr(dataNew.norm$Date, 1, 4)==2009|substr(dataNew.norm$Date, 1, 4)==2010|substr(dataNew.norm$Date, 1, 4)==2011|substr(dataNew.norm$Date, 1, 4)==2012)
+
+
 #annual total precipitation (PRCPTOT)
 annual.prec <- numeric(30)
 for (i in 1:30) {
@@ -22,6 +27,15 @@ for (i in 1:30) {
   annual.rain.10[i] <- length(z$Data)/16
 }
 
+#annual total days >= 20mm (R20mm)
+data.New20 <- subset(dataNew.norm, Data >= 20)
+annual.rain.20 <- numeric(30)
+for (i in 1:30) {
+  a <- subset(data.New20, year==ano[i])
+  annual.rain.20[i] <- length(a$Data)/16
+}
+ar.20.ts <- ts(annual.rain.20, start=1983)
+
 #proportion of days
 ar10.prop <- numeric(30)
 for (i in 1:30){
@@ -35,15 +49,35 @@ for (i in 1:30){
 }
 ar20.prop.ts <- ts(ar20.prop, start=1983)
 
-
-#annual total days >= 20mm (R20mm)
-data.New20 <- subset(dataNew.norm, Data >= 20)
-annual.rain.20 <- numeric(30)
+#accumulated rainfall on R10mm days
+R10amount <- numeric(30)
 for (i in 1:30) {
-  a <- subset(data.New20, year==ano[i])
-  annual.rain.20[i] <- length(a$Data)/16
+  z <- subset(data.New10, year==ano[i])
+  R10amount[i] <- sum(z$Data)/16 
 }
-ar.20.ts <- ts(annual.rain.20, start=1983)
+R10amount.ts <- ts(R10amount, start=1983)
+
+
+#accumulated rainfall on R20mm days
+R20amount <- numeric(30)
+for (i in 1:30) {
+  z <- subset(data.New20, year==ano[i])
+  R20amount[i] <- sum(z$Data)/16 
+}
+R20amount.ts <- ts(R20amount, start=1983)
+
+#proportion of accumulated rain to PRCPTOT
+R10amount.prop <- numeric(30)
+for (i in 1:30){
+  R10amount.prop[i] <- R10amount[i]/annual.prec[i]
+}
+R10amount.prop.ts <- ts(R10amount.prop, start=1983)
+
+R20amount.prop <- numeric(30)
+for (i in 1:30){
+  R20amount.prop[i] <- R20amount[i]/annual.prec[i]
+}
+R20amount.prop.ts <- ts(R20amount.prop, start=1983)
 
 plot(ano, annual.rain.10, type="n", main = "Total number of days >= 20 mm rain", xlab = "year", ylab = "Days")
 abline(h = mean(annual.rain.20), col="red")
@@ -236,14 +270,14 @@ lines(lowess(r99.ts, f=0.4), col = 4)
 legend(2000, 175, c(paste("f = ", c("0.3", "0.4"))), lty = 1, col = 3:4)
 
 #Bootstrap quantiles
-quantile = quantile(y0312$Data, probs= c(0.95, 0.99), type=5)
+quantile = quantile(y8493$Data, probs= c(0.95, 0.99), type=5)
 B = 5000
-n = length(y0312$Data)
+n = length(y8493$Data)
 
-z <- rep(max(y0312$Data),5000)
-df <- c(z ,sample(y0312$Data, size = B * (n-1), replace = TRUE))
+z <- rep(max(y8493$Data),5000)
+df <- c(z ,sample(y8493$Data, size = B * (n-1), replace = TRUE))
 boot.samples = matrix(df,B, n)
-boot.samples = matrix(sample(y0312$Data, size = B * n, replace = TRUE), B, n)
+boot.samples = matrix(sample(y8493$Data, size = B * n, replace = TRUE), B, n)
 boot.statistics = apply(boot.samples, 1, quantile, probs=c(0.95, 0.99), type=5)
 
 require(ggplot2)
