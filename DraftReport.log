@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.2)  18 MAY 2018 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.2)  31 MAY 2018 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,237 +818,252 @@ R95all.pdf, id=507, 597.23125pt x 420.57124pt>
 File: R95all.pdf Graphic file (type pdf)
 
 <use R95all.pdf>
-Package pdftex.def Info: R95all.pdf used on input line 768.
+Package pdftex.def Info: R95all.pdf used on input line 770.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
  <R95GCMall.pdf, id=508, 254.9525pt x 100.375pt>
 File: R95GCMall.pdf Graphic file (type pdf)
 
 <use R95GCMall.pdf>
-Package pdftex.def Info: R95GCMall.pdf used on input line 773.
+Package pdftex.def Info: R95GCMall.pdf used on input line 775.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  <R95GCMmean.pdf, id=509, 254.9525pt x 100.375pt>
 File: R95GCMmean.pdf Graphic file (type pdf)
 
 <use R95GCMmean.pdf>
-Package pdftex.def Info: R95GCMmean.pdf used on input line 778.
+Package pdftex.def Info: R95GCMmean.pdf used on input line 780.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  [23 <./R20mmall.pdf> <./R20mmodes.pdf> <./R20GCMall.pdf> <./R20GCMmean.pdf>] <
 R99all.pdf, id=531, 597.23125pt x 420.57124pt>
 File: R99all.pdf Graphic file (type pdf)
 
 <use R99all.pdf>
-Package pdftex.def Info: R99all.pdf used on input line 789.
+Package pdftex.def Info: R99all.pdf used on input line 791.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
  <R99GCMall.pdf, id=532, 254.9525pt x 100.375pt>
 File: R99GCMall.pdf Graphic file (type pdf)
 
 <use R99GCMall.pdf>
-Package pdftex.def Info: R99GCMall.pdf used on input line 794.
+Package pdftex.def Info: R99GCMall.pdf used on input line 796.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  <R99GCMmean.pdf, id=533, 254.9525pt x 100.375pt>
 File: R99GCMmean.pdf Graphic file (type pdf)
 
 <use R99GCMmean.pdf>
-Package pdftex.def Info: R99GCMmean.pdf used on input line 799.
+Package pdftex.def Info: R99GCMmean.pdf used on input line 801.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  [24 <./R95all.pdf> <./R95GCMall.pdf> <./R95GCMmean.pdf>]
 <R1GCM45all.pdf, id=549, 254.9525pt x 100.375pt>
 File: R1GCM45all.pdf Graphic file (type pdf)
  <use R1GCM45all.pdf>
-Package pdftex.def Info: R1GCM45all.pdf used on input line 813.
+Package pdftex.def Info: R1GCM45all.pdf used on input line 815.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <R1GCM45mean.pdf, id=550, 254.9525pt x 100.375pt>
 File: R1GCM45mean.pdf Graphic file (type pdf)
  <use R1GCM45mean.pdf>
-Package pdftex.def Info: R1GCM45mean.pdf used on input line 818.
+Package pdftex.def Info: R1GCM45mean.pdf used on input line 820.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <R10GCM45all.pdf, id=551, 254.9525pt x 100.375pt>
 File: R10GCM45all.pdf Graphic file (type pdf)
  <use R10GCM45all.pdf>
-Package pdftex.def Info: R10GCM45all.pdf used on input line 829.
+Package pdftex.def Info: R10GCM45all.pdf used on input line 831.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <R10GCM45mean_long.pdf, id=552, 254.9525pt x 100.375pt>
 File: R10GCM45mean_long.pdf Graphic file (type pdf)
 
 <use R10GCM45mean_long.pdf>
-Package pdftex.def Info: R10GCM45mean_long.pdf used on input line 834.
+Package pdftex.def Info: R10GCM45mean_long.pdf used on input line 836.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  [25 <./R99all.pdf> <./R99GCMall.pdf> <./R99GCMmean.pdf> <./R1GCM45all.pdf> <./
 R1GCM45mean.pdf>]
 <R20GCM45all.pdf, id=575, 254.9525pt x 100.375pt>
 File: R20GCM45all.pdf Graphic file (type pdf)
  <use R20GCM45all.pdf>
-Package pdftex.def Info: R20GCM45all.pdf used on input line 845.
+Package pdftex.def Info: R20GCM45all.pdf used on input line 847.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <R20GCM45mean.pdf, id=576, 254.9525pt x 100.375pt>
 File: R20GCM45mean.pdf Graphic file (type pdf)
  <use R20GCM45mean.pdf>
-Package pdftex.def Info: R20GCM45mean.pdf used on input line 850.
+Package pdftex.def Info: R20GCM45mean.pdf used on input line 852.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 File: R1GCM45mean.pdf Graphic file (type pdf)
 
 <use R1GCM45mean.pdf>
-Package pdftex.def Info: R1GCM45mean.pdf used on input line 864.
+Package pdftex.def Info: R1GCM45mean.pdf used on input line 866.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  <R1GCM85mean.pdf, id=577, 254.9525pt x 100.375pt>
 File: R1GCM85mean.pdf Graphic file (type pdf)
 
 <use R1GCM85mean.pdf>
-Package pdftex.def Info: R1GCM85mean.pdf used on input line 869.
+Package pdftex.def Info: R1GCM85mean.pdf used on input line 871.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
  [26 <./R10GCM45all.pdf> <./R10GCM45mean_long.pdf> <./R20GCM45all.pdf> <./R20GC
 M45mean.pdf>]
 File: R10GCM45mean_long.pdf Graphic file (type pdf)
  <use R10GCM45mean_long.pdf>
-Package pdftex.def Info: R10GCM45mean_long.pdf used on input line 880.
+Package pdftex.def Info: R10GCM45mean_long.pdf used on input line 882.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <R10GCM85mean_long.pdf, id=593, 254.9525pt x 100.375pt>
 File: R10GCM85mean_long.pdf Graphic file (type pdf)
 
 <use R10GCM85mean_long.pdf>
-Package pdftex.def Info: R10GCM85mean_long.pdf used on input line 885.
+Package pdftex.def Info: R10GCM85mean_long.pdf used on input line 887.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 File: R20GCM45mean.pdf Graphic file (type pdf)
  <use R20GCM45mean.pdf>
-Package pdftex.def Info: R20GCM45mean.pdf used on input line 896.
+Package pdftex.def Info: R20GCM45mean.pdf used on input line 898.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <R20GCM85mean.pdf, id=594, 254.9525pt x 100.375pt>
 File: R20GCM85mean.pdf Graphic file (type pdf)
  <use R20GCM85mean.pdf>
-Package pdftex.def Info: R20GCM85mean.pdf used on input line 901.
+Package pdftex.def Info: R20GCM85mean.pdf used on input line 903.
 (pdftex.def)             Requested size: 236.01561pt x 92.92351pt.
 
 <lowessAp.pdf, id=595, 597.23125pt x 420.57124pt>
 File: lowessAp.pdf Graphic file (type pdf)
  <use lowessAp.pdf>
-Package pdftex.def Info: lowessAp.pdf used on input line 918.
+Package pdftex.def Info: lowessAp.pdf used on input line 920.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
 
 <lowessRd.pdf, id=596, 597.23125pt x 420.57124pt>
 File: lowessRd.pdf Graphic file (type pdf)
  <use lowessRd.pdf>
-Package pdftex.def Info: lowessRd.pdf used on input line 923.
+Package pdftex.def Info: lowessRd.pdf used on input line 925.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
 
 <lowessR10.pdf, id=597, 597.23125pt x 420.57124pt>
 File: lowessR10.pdf Graphic file (type pdf)
  <use lowessR10.pdf>
-Package pdftex.def Info: lowessR10.pdf used on input line 928.
+Package pdftex.def Info: lowessR10.pdf used on input line 930.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
 
 <lowessR20.pdf, id=598, 597.23125pt x 420.57124pt>
 File: lowessR20.pdf Graphic file (type pdf)
  <use lowessR20.pdf>
-Package pdftex.def Info: lowessR20.pdf used on input line 933.
+Package pdftex.def Info: lowessR20.pdf used on input line 935.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
 
 <lowessR95.pdf, id=599, 597.23125pt x 420.57124pt>
 File: lowessR95.pdf Graphic file (type pdf)
  <use lowessR95.pdf>
-Package pdftex.def Info: lowessR95.pdf used on input line 938.
+Package pdftex.def Info: lowessR95.pdf used on input line 940.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
 
 <lowessR99.pdf, id=600, 597.23125pt x 420.57124pt>
 File: lowessR99.pdf Graphic file (type pdf)
  <use lowessR99.pdf>
-Package pdftex.def Info: lowessR99.pdf used on input line 943.
+Package pdftex.def Info: lowessR99.pdf used on input line 945.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
  [27 <./R1GCM85mean.pdf> <./R10GCM85mean_long.pdf> <./R20GCM85mean.pdf>]
 <extRainRatio95.pdf, id=613, 597.23125pt x 420.57124pt>
 File: extRainRatio95.pdf Graphic file (type pdf)
 
 <use extRainRatio95.pdf>
-Package pdftex.def Info: extRainRatio95.pdf used on input line 955.
+Package pdftex.def Info: extRainRatio95.pdf used on input line 957.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
 
 <extRainRatio99.pdf, id=614, 597.23125pt x 420.57124pt>
 File: extRainRatio99.pdf Graphic file (type pdf)
 
 <use extRainRatio99.pdf>
-Package pdftex.def Info: extRainRatio99.pdf used on input line 960.
+Package pdftex.def Info: extRainRatio99.pdf used on input line 962.
 (pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
  [28 <./lowessAp.pdf> <./lowessRd.pdf> <./lowessR10.pdf> <./lowessR20.pdf> <./l
 owessR95.pdf> <./lowessR99.pdf>]
 <tsPRCPTOTu.pdf, id=656, 597.23125pt x 420.57124pt>
 File: tsPRCPTOTu.pdf Graphic file (type pdf)
  <use tsPRCPTOTu.pdf>
-Package pdftex.def Info: tsPRCPTOTu.pdf used on input line 971.
+Package pdftex.def Info: tsPRCPTOTu.pdf used on input line 973.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsPRCPTOTb.pdf, id=657, 597.23125pt x 420.57124pt>
 File: tsPRCPTOTb.pdf Graphic file (type pdf)
  <use tsPRCPTOTb.pdf>
-Package pdftex.def Info: tsPRCPTOTb.pdf used on input line 976.
+Package pdftex.def Info: tsPRCPTOTb.pdf used on input line 978.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsPRCPTOTs.pdf, id=658, 597.23125pt x 420.57124pt>
 File: tsPRCPTOTs.pdf Graphic file (type pdf)
  <use tsPRCPTOTs.pdf>
-Package pdftex.def Info: tsPRCPTOTs.pdf used on input line 981.
+Package pdftex.def Info: tsPRCPTOTs.pdf used on input line 983.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR1u.pdf, id=659, 597.23125pt x 420.57124pt>
 File: tsR1u.pdf Graphic file (type pdf)
  <use tsR1u.pdf>
-Package pdftex.def Info: tsR1u.pdf used on input line 993.
+Package pdftex.def Info: tsR1u.pdf used on input line 995.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR1b.pdf, id=660, 597.23125pt x 420.57124pt>
 File: tsR1b.pdf Graphic file (type pdf)
  <use tsR1b.pdf>
-Package pdftex.def Info: tsR1b.pdf used on input line 998.
+Package pdftex.def Info: tsR1b.pdf used on input line 1000.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR1s.pdf, id=661, 597.23125pt x 420.57124pt>
 File: tsR1s.pdf Graphic file (type pdf)
  <use tsR1s.pdf>
-Package pdftex.def Info: tsR1s.pdf used on input line 1003.
+Package pdftex.def Info: tsR1s.pdf used on input line 1005.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR10u.pdf, id=662, 597.23125pt x 420.57124pt>
 File: tsR10u.pdf Graphic file (type pdf)
  <use tsR10u.pdf>
-Package pdftex.def Info: tsR10u.pdf used on input line 1014.
+Package pdftex.def Info: tsR10u.pdf used on input line 1016.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR10b.pdf, id=663, 597.23125pt x 420.57124pt>
 File: tsR10b.pdf Graphic file (type pdf)
  <use tsR10b.pdf>
-Package pdftex.def Info: tsR10b.pdf used on input line 1019.
+Package pdftex.def Info: tsR10b.pdf used on input line 1021.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR10s.pdf, id=664, 597.23125pt x 420.57124pt>
 File: tsR10s.pdf Graphic file (type pdf)
  <use tsR10s.pdf>
-Package pdftex.def Info: tsR10s.pdf used on input line 1024.
+Package pdftex.def Info: tsR10s.pdf used on input line 1026.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
  [29 <./extRainRatio95.pdf> <./extRainRatio99.pdf> <./tsPRCPTOTu.pdf> <./tsPRCP
 TOTb.pdf> <./tsPRCPTOTs.pdf> <./tsR1u.pdf> <./tsR1b.pdf> <./tsR1s.pdf>]
 <tsR20u.pdf, id=716, 597.23125pt x 420.57124pt>
 File: tsR20u.pdf Graphic file (type pdf)
  <use tsR20u.pdf>
-Package pdftex.def Info: tsR20u.pdf used on input line 1035.
+Package pdftex.def Info: tsR20u.pdf used on input line 1037.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR20b.pdf, id=717, 597.23125pt x 420.57124pt>
 File: tsR20b.pdf Graphic file (type pdf)
  <use tsR20b.pdf>
-Package pdftex.def Info: tsR20b.pdf used on input line 1040.
+Package pdftex.def Info: tsR20b.pdf used on input line 1042.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
 
 <tsR20s.pdf, id=718, 597.23125pt x 420.57124pt>
 File: tsR20s.pdf Graphic file (type pdf)
  <use tsR20s.pdf>
-Package pdftex.def Info: tsR20s.pdf used on input line 1045.
+Package pdftex.def Info: tsR20s.pdf used on input line 1047.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
- [30 <./tsR10u.pdf> <./tsR10b.pdf> <./tsR10s.pdf> <./tsR20u.pdf> <./tsR20b.pdf>
- <./tsR20s.pdf>] [31] (./DraftReport.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1061
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1067
+
+ []
+
+[30 <./tsR10u.pdf> <./tsR10b.pdf> <./tsR10s.pdf> <./tsR20u.pdf> <./tsR20b.pdf> 
+<./tsR20s.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
+
+ []
+
+[31] (./DraftReport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1079,7 +1094,7 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DraftReport.pdf (31 pages, 15138702 bytes).
+Output written on DraftReport.pdf (31 pages, 15143877 bytes).
 PDF statistics:
  820 PDF objects out of 1000 (max. 8388607)
  567 compressed objects within 6 object streams
