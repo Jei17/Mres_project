@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.2)  31 MAY 2018 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.2)  1 JUN 2018 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1047,32 +1047,120 @@ File: tsR20s.pdf Graphic file (type pdf)
  <use tsR20s.pdf>
 Package pdftex.def Info: tsR20s.pdf used on input line 1047.
 (pdftex.def)             Requested size: 141.61081pt x 99.71985pt.
+ [30 <./tsR10u.pdf> <./tsR10b.pdf> <./tsR10s.pdf> <./tsR20u.pdf> <./tsR20b.pdf>
+ <./tsR20s.pdf>] <tsHO.pdf, id=759, 597.23125pt x 420.57124pt>
+File: tsHO.pdf Graphic file (type pdf)
+ <use tsHO.pdf>
+Package pdftex.def Info: tsHO.pdf used on input line 1069.
+(pdftex.def)             Requested size: 283.22162pt x 199.44612pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1061
+<tsHOmam.pdf, id=760, 597.23125pt x 420.57124pt>
+File: tsHOmam.pdf Graphic file (type pdf)
+ <use tsHOmam.pdf>
+Package pdftex.def Info: tsHOmam.pdf used on input line 1074.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsHOjja.pdf, id=761, 597.23125pt x 420.57124pt>
+File: tsHOjja.pdf Graphic file (type pdf)
+ <use tsHOjja.pdf>
+Package pdftex.def Info: tsHOjja.pdf used on input line 1079.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsHOson.pdf, id=762, 597.23125pt x 420.57124pt>
+File: tsHOson.pdf Graphic file (type pdf)
+ <use tsHOson.pdf>
+Package pdftex.def Info: tsHOson.pdf used on input line 1084.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsHOdjf.pdf, id=763, 597.23125pt x 420.57124pt>
+File: tsHOdjf.pdf Graphic file (type pdf)
+ <use tsHOdjf.pdf>
+Package pdftex.def Info: tsHOdjf.pdf used on input line 1089.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ [31]
+<tsADA.pdf, id=768, 597.23125pt x 420.57124pt>
+File: tsADA.pdf Graphic file (type pdf)
+ <use tsADA.pdf>
+Package pdftex.def Info: tsADA.pdf used on input line 1101.
+(pdftex.def)             Requested size: 283.22162pt x 199.44612pt.
+
+<tsADAmam.pdf, id=769, 597.23125pt x 420.57124pt>
+File: tsADAmam.pdf Graphic file (type pdf)
+ <use tsADAmam.pdf>
+Package pdftex.def Info: tsADAmam.pdf used on input line 1106.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsADAjja.pdf, id=770, 597.23125pt x 420.57124pt>
+File: tsADAjja.pdf Graphic file (type pdf)
+ <use tsADAjja.pdf>
+Package pdftex.def Info: tsADAjja.pdf used on input line 1111.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsADAson.pdf, id=771, 597.23125pt x 420.57124pt>
+File: tsADAson.pdf Graphic file (type pdf)
+ <use tsADAson.pdf>
+Package pdftex.def Info: tsADAson.pdf used on input line 1116.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsADAdjf.pdf, id=772, 597.23125pt x 420.57124pt>
+File: tsADAdjf.pdf Graphic file (type pdf)
+ <use tsADAdjf.pdf>
+Package pdftex.def Info: tsADAdjf.pdf used on input line 1121.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ [32 <./tsHO.pdf> <./tsHOmam.pdf> <./tsHOjja.pdf> <./tsHOson.pdf> <./tsHOdjf.pd
+f>]
+[33] <tsKRA.pdf, id=804, 597.23125pt x 420.57124pt>
+File: tsKRA.pdf Graphic file (type pdf)
+ <use tsKRA.pdf>
+Package pdftex.def Info: tsKRA.pdf used on input line 1133.
+(pdftex.def)             Requested size: 283.22162pt x 199.44612pt.
+
+<tsKRAmam.pdf, id=805, 597.23125pt x 420.57124pt>
+File: tsKRAmam.pdf Graphic file (type pdf)
+ <use tsKRAmam.pdf>
+Package pdftex.def Info: tsKRAmam.pdf used on input line 1138.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsKRAjja.pdf, id=806, 597.23125pt x 420.57124pt>
+File: tsKRAjja.pdf Graphic file (type pdf)
+ <use tsKRAjja.pdf>
+Package pdftex.def Info: tsKRAjja.pdf used on input line 1143.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsKRAson.pdf, id=807, 597.23125pt x 420.57124pt>
+File: tsKRAson.pdf Graphic file (type pdf)
+ <use tsKRAson.pdf>
+Package pdftex.def Info: tsKRAson.pdf used on input line 1148.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+
+<tsKRAdjf.pdf, id=808, 597.23125pt x 420.57124pt>
+File: tsKRAdjf.pdf Graphic file (type pdf)
+ <use tsKRAdjf.pdf>
+Package pdftex.def Info: tsKRAdjf.pdf used on input line 1153.
+(pdftex.def)             Requested size: 236.01561pt x 166.20404pt.
+ [34 <./tsADA.pdf> <./tsADAmam.pdf> <./tsADAjja.pdf> <./tsADAson.pdf> <./tsADAd
+jf.pdf>]
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1166
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1067
-
- []
-
-[30 <./tsR10u.pdf> <./tsR10b.pdf> <./tsR10s.pdf> <./tsR20u.pdf> <./tsR20b.pdf> 
-<./tsR20s.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
+[36 <./tsKRA.pdf> <./tsKRAmam.pdf> <./tsKRAjja.pdf> <./tsKRAson.pdf> <./tsKRAdj
+f.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
 
  []
 
-[31] (./DraftReport.aux)
+[37] (./DraftReport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4692 strings out of 492995
- 70832 string characters out of 6132704
- 151139 words of memory out of 5000000
- 8063 multiletter control sequences out of 15000+600000
+ 4770 strings out of 492995
+ 71967 string characters out of 6132704
+ 151169 words of memory out of 5000000
+ 8126 multiletter control sequences out of 15000+600000
  14136 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,11n,39p,1853b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1094,10 +1182,10 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DraftReport.pdf (31 pages, 15143877 bytes).
+Output written on DraftReport.pdf (37 pages, 16500420 bytes).
 PDF statistics:
- 820 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
+ 932 PDF objects out of 1000 (max. 8388607)
+ 642 compressed objects within 7 object streams
  0 named destinations out of 1000 (max. 500000)
- 551 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 626 words of extra memory for PDF output out of 10000 (max. 10000000)
 

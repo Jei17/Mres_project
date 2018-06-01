@@ -66,24 +66,6 @@ JJA <- subset(x, month==6|month==7|month==8)
 SON <- subset(x, month==9|month==10|month==11)
 
 #plot time-serie/trend
-x.ts <- ts(x$Data, frequency = 365.25, start=c(1983,1,1))
-plot(x.ts, main=unique(x$Station), ylab="rain amount (mm)")
-
-DJF.ts <- ts(DJF$Data,frequency = 90.25, start=1983)
-plot(DJF.ts, main="DJF", ylab="rain(mm)")
-lines(lowess(DJF.ts, f=0.0001), col = 6)
-
-MAM.ts <- ts(MAM$Data,frequency = 91, start=1983)
-plot(MAM.ts, main="MAM", ylab="rain(mm)")
-lines(lowess(MAM.ts, f=0.0001), col = 6)
-
-JJA.ts <- ts(JJA$Data,frequency = 92, start=1983)
-plot(MAM.ts, main="JJA", ylab="rain(mm)")
-lines(lowess(JJA.ts, f=0.0001), col = 6)
-
-SON.ts <- ts(SON$Data,frequency = 91, start=1983)
-plot(SON.ts, main="SON", ylab="rain(mm)")
-lines(lowess(SON.ts, f=0.0001), col = 6)
 
 #test for trend and stationarity
 y <- MAM

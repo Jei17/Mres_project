@@ -1056,9 +1056,108 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 	
 	\section{Extreme analysis}
 	\subsection{Ground work}
-	In order to use the extreme value theory, in our case \textbf{POT} method, we nee our data to be stationary, to ensure identical, and independent. To make data behave independent, we remove the smaller of the two esceedances, if they are closer then a certain number of days from each other. This lag is usually set to 3 or 5 days, depending on region and time of year. To make sure that the exceedances follows a \textbf{Poisson point process},the standard way is to consider data in cluster of a specific size and then only take the maximum if more then one observation within that cluster exceeds the threshold. This makes it important to pick a high enough threshold, since else a lot of our observations will be lost.
-	To ensure stationarity is more diffucult and several approaches are used. One is to divide the data into seasons and use different thresholds for each season. The issue with this method is that we assume stationarity within each season and therefore can get unrealistic return values if there in fact is a trend in the data. If one knows that the data depends on other factors, such as the yield depends on temperature and rain, one can use a Box-Cox transformation on the data and then let the drift and trend parameter depend on these other paramters, so called \textbf{covariates}. This however requires that we know of these covariates, can estimate or already have models for how they affect our data and have measurments of these covariates over the same time period as our own data.\\
+	In order to use the extreme value theory, in our case \textbf{POT} method, we need our data to be stationary, to ensure identical, and independent. To make data behave independent, we remove the smaller exceedances, if they are more then one closer then a certain number of days from each other. This lag is usually set to 3 or 5 days, depending on region and time of year. To make sure that the exceedances follows a \textbf{Poisson point process},the standard way is to consider data in cluster of a specific size and then only take the maximum if more then one observation within that cluster exceeds the threshold. This makes it important to pick a high enough threshold, since else a lot of our observations will be lost.
+	To ensure stationarity is more difficult and several approaches are used. One is to divide the data into seasons and use different thresholds for each season. The issue with this method is that we assume stationarity within each season and therefore can get unrealistic return values if there in fact is a trend in the data. If one knows that the data depends on other factors, such as the yield depends on temperature and rain, one can use a Box-Cox transformation on the data and then let the drift and trend parameter depend on these other paramters, so called \textbf{covariates}. This however requires that we know of these covariates, can estimate or already have models for how they affect our data and have measurments of these covariates over the same time period as our own data.\\
+	To investigate stationarity in our time serie, we first applied a decomposition on both the full time series and then on each season. This to look at trends both on an annual time scale but also on a seasonal one. By decomposing even the seasons we can remove influence on seasonality within each season, i.e we usually have a lot more rain in September then in November. To statisically check for stationarity, we used the \textbf{Augmented dickey-Fuller test} (ADF). Many uses \textbf{ManKendell}, but since this test only uses non ties and we have loads of zeroes in several seasons, it will not be very reliable (?). 
 	
+	\subsubsection{Time series analysis}
+	{\Large\textbf{HO}}: Figure \ref{tsHO} shows the trends for years and seasons. The only season that is showing some sort of trend is DJF, which seems to have a slight increasing trend. However, the scale is so small,that it is more or less neglectibe. SON is not showing a clear trend, but an increased volatility in the trend after 1995. There is a big volatilty in the JJA trend, suggesting that the rain in that season depends on some other process. MAM is the most steady season. All time series rejects the null hypothesis for the ADF test, hence suggesting that there is no unit root, i.e stationary. 
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.6\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsHO.pdf}
+			\caption{Full time series}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{tsHOmam.pdf}
+			\caption{MAM}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsHOjja.pdf}
+			\caption{JJA}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{tsHOson.pdf}
+			\caption{SON}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsHOdjf.pdf}
+			\caption{DJF}
+		\end{subfigure}%
+		\caption{Decomposition of time series for HO}
+		\label{tsHO}
+	\end{figure}
+
+	{\Large\textbf{ADA}}: In figure \ref{tsADA} we can once again see that there is no clear trend on the annual time series, which the ADF test confirms. MAM has again the smoothest trend series with only one big dip around 1988, and there seems to be a decrease in the most extreme values. JJA is similarly to HO showing periodic behaviour indicating that there is some underlying process effecting the rain in this season. Cannot really detect a trend. SON shows a fairly flat trend graph, but an increase in extreme observations after some dry years between 1990-2000. DJF is also showing an increse in the amplitude of extreme values even if the number of extreme values is not clearly increasing. The tend graph is not flat mostly due to the fact that we nearly only have zero values.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.6\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsADA.pdf}
+			\caption{Full time series}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{tsADAmam.pdf}
+			\caption{MAM}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsADAjja.pdf}
+			\caption{JJA}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{tsADAson.pdf}
+			\caption{SON}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsADAdjf.pdf}
+			\caption{DJF}
+		\end{subfigure}%
+		\caption{Decomposition of time series for ADA}
+		\label{tsADA}
+	\end{figure}
+
+	{\Large\textbf{KRA}}: Comparing fig \ref{tsKRA} with the two previous, we can see a lot of similarities. There is once again no trend in the full time series and it is somewhere between the behaviour of HO and ADA, with HO being much smoother and ADA more volitile. But for this station MAM and JJA are similarly smooth. MAM seems to have an increase in amplitude in extreme values, which is not visible in JJA. SON instead looks like it is having less exteme values, wheras DJF clearly has an increase both in number and amplitude in extreme values. All time series rejects the null hypothesis for the ADF test.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.6\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsKRA.pdf}
+			\caption{Full time series}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{tsKRAmam.pdf}
+			\caption{MAM}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsKRAjja.pdf}
+			\caption{JJA}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{tsKRAson.pdf}
+			\caption{SON}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\centering
+			\includegraphics[width=1\linewidth]{tsKRAdjf.pdf}
+			\caption{DJF}
+		\end{subfigure}%
+		\caption{Decomposition of time series for KRA}
+		\label{tsKRA}
+	\end{figure}
+	
+
 	{\Large\textbf{HO}}: \textbf{MAM}: Both trend tests gives high p-values, i.e no evidence for a trend in the time series. Both unit root tests indicates that the series is stationary/ trend stationary. No significant autocorrelation or pattern in lag 1 plot.
 	\textbf{JJA}: Using p=0.1 we reject the null hypothesis and conclude that we have a decresing trend, but not on a 5\% level (MK does not confirm). Same result as above for unit root and autocorrelation.
 	\textbf{SON}: No evidence for a trend, unit root or autocorrelation. 
