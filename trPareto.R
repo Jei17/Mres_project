@@ -1,3 +1,4 @@
+require(ReIns)
 x_nn <- sort(dataNew.norm$Data, decreasing = TRUE)
 
 x_400n <- x_nn[1:400]
@@ -58,7 +59,7 @@ trQuantMLE(x, gamma=tM$gamma, tau=tM$tau, DT=tD$DT, p=p, Y = TRUE, add = TRUE, c
 
 #Truncation analysis for stations
 #pick station for analysis
-x <- KRA
+x <- ADA
 
 DJF <- subset(x, month==1| month==2|month==12)
 MAM <- subset(x, month==3|month==4 |month==5)
@@ -68,7 +69,7 @@ SON <- subset(x, month==9|month==10|month==11)
 #plot time-serie/trend
 
 #test for trend and stationarity
-y <- MAM
+y <- SON
   
 trend.test(y$Data)
 cox.stuart.test(y$Data)
@@ -85,30 +86,73 @@ x_t <- y$Data[2:n]
 x_t1 <- y$Data[1:n-1]
 plot(x_t1, x_t)
 
-#POT method,declustering = 5 days
+#Pick out the tail data
+require(evir)
 y.pos <- subset(y, Data >= 1)
-n <- floor(length(y.pos$Data)*0.1)
-pot(y$Data, nextremes = n, run = 5)
+n <- floor(length(y.pos$Data)*0.3)
+MeanExcess(y.pos$Data, plot=TRUE, k=TRUE)
+n <- 80
 
 y_nn <- sort(y$Data, decreasing = TRUE)
 z <- y_nn[1:n]
 
 #check for duplicated values, smoothing (make it cts). m=2 => +0.025, m=3 => 1/6, 1/2, 5/6
 z[duplicated(z) | duplicated(z, fromLast=TRUE)]
-which(z==46.6)
 
 #if duplicates at position z[a]
-a <- 34
-z[a-1] <- z[a-1] + 0.025
-z[a] <- z[a] - 0.025
+a <-which(z==18.2)[1]
+# 2 ties
+z[a+1] <- z[a+1] - 0.025
+z[a] <- z[a] + 0.025
 
-tM <- trMLE(z,start = c(1,1), plot=FALSE)
+#3 ties
+z[a] <- z[a] + 0.16
+z[a+2] <- z[a+2] - 0.16
+
+#Test for rough truncation
+tM <- trMLE(z,start = c(0.1,1))
+tT <- trTest(z, plot=TRUE) #must have >0 shape parameter
 tTM <- trTestMLE(z, gamma=tM$gamma, tau=tM$tau, alpha = 0.05, plot = TRUE, main = "Test for truncation")
 
-#Shape parameter estimation
+
+#Parameter estimation, end point, GPD fit
+
+#Shape parameter estimation, non truncated
 H <- Hill(z, plot=TRUE, main="Shape parameter estimation", col=2, ylim=c(-1,1))
 GH <- genHill(z, gamma=H$gamma, add=TRUE, col=3)
 g <- GPDmle(z, add=TRUE, col=4)
 M <- Moment(z, add=TRUE, col=5)
 abline(h=0)
 legend("bottomright", c("Hill", "genHill", "MLE", "MOM"), col = c(2, 3, 4, 5), lty = 1, cex=0.7)
+
+#GPD fit, non truncated
+fit.gpd <- GPDfit(z, start=c(0.1,1)) #MLE
+qplot(z,xi = pot$par.ests[1] , line=TRUE, main="QQ using POT shape estimate")
+genQQ(z, gamma=H$gamma, plot=TRUE) #can only use Hill as input
+GPDresiduals(z, t=y_nn[n], gamma = g$gamma[60], sigma = g$sigma[60], plot=TRUE)
+
+pot <-pot(y$Data, nextremes = n, run = 5) #at least 5 days between extremes
+
+#quantile estimation usgin GPDmle
+p= 0.0001
+QuantGH(z, gamma=GH$gamma, p=p, plot =TRUE, col=4)
+QuantGPD(z, gamma=g$gamma, sigma=g$sigma,p=p, add = TRUE, col=2)
+QuantMOM(z, gamma=M$gamma, p=p, add=TRUE, col=3)
+legend("topright", c("GPD", "MOM", "genHill"), col = c(2, 3, 4), lty = 1, cex=0.7)
+
+#Estimations if truncated
+tH <- trHill(z, plot=TRUE, col=2, ylim=c(-1,1))
+tT <- trEndpointMLE(z, gamma=tM$gamma, tau = tM$tau, plot=TRUE)
+tDT <- trDT(z, gamma=tH$gamma, plot = TRUE)
+tMDT <- trDTMLE(z, gamma=tM$gamma, tau=tM$gamma, plot=TRUE)
+
+trParetoQQ(z, DT= tDT$DT, plot=TRUE)
+
+#control no trend in extremes
+w <- subset(y, Data > y_nn[n])
+w <- w$Data
+
+for (i in 1:length(w)) {
+  w[i] <- w[i] - y_nn[n]
+}
+plot(w)

@@ -318,7 +318,7 @@ dec &28.64 &11.52 & 26.88 & 11.48 &14.2 &69.45& 1.43 & 2.85 \\
 		\caption{Observations, annual mean, daily mean}
 		\label{maps}
 	\end{figure}
-	Looking at the values in table \ref{MonAvegroups}, we can see that the mean and the median is very close to each other for all stations and months. The \textit{mean absolute deviation} varies a lot between months within groups and between groups, where we for example have a very low value for August in Semi but very large in Uni, which is to be expected since we have a larger spread in rainy months than dryer. We can once again see the big difference in the dryer months between the north and the other stations, with the north having a much dryer Dec-Feb then the other. Disscusion on appropriate values for the skew and kurtosis range for data to be normally distributed varies from 0.8 up to 3, with many stating 2 to be the general value. If we use 2, all months are considered to be normally symmetrical distributed but if we use 0.8 , the dry period in the north and Semi and the most extreme months in Bi is not. Nearly all months in Bi is having a negative kurtosis wheras for the other only half are negative. So many of the sets are more lightly tailed then a normal distribution.\\
+	Looking at the values in table \ref{MonAvegroups}, we can see that the mean and the median is very close to each other for all stations and months. The \textit{mean absolute deviation} varies a lot between months within groups and between groups, where we for example have a very low value for August in Semi but very large in Uni, which is to be expected since we have a larger spread in rainy months than dryer. We can once again see the big difference in the dryer months between the north and the other stations, with the north having a much dryer Dec-Feb then the other. Disscusion on appropriate values for the skew and kurtosis range for data to be normally distributed varies from 0.8 up to 3, with many stating 2 to be the general value. If we use 2, all months are considered to be normally symmetrical distributed but if we use 0.8 , the dry period in the north and Semi and the most extreme months in Bi is not. Nearly all months in Bi is having a negative kurtosis wheras for the other only half are negative. So many of the sets are more lightly tailed than a normal distribution.\\
 	
 	We can see that the number of positive observations varies a lot, with most observations in the midlands and the station "AXM", and fewer in the north and along rest of the coastline. We get nearly the exact same distribution whether we include rain amounts less then 1 mm or not. The annual mean is close to identical if we discard all observations $<$ 1mm, sometimes refered to as trace values, which makes sense since they are very small and will not have that much of an impact on an annual scale. But if we look at the rainy day mean, we see, as expected, an increase in the mean, but also a slightly different distribution. If we include all positive values, we have a very low mean on the station "TDI" and relatively high means in the north. But if we discard the trace values, we see a higher mean compared to the other stations along the coast and a lower mean in comparison with other stations in the north. This tells us that we have many extremly small values along the coast, but much less in the north and the midlands, which could be because of higher humidity by the ocean.
 	
@@ -1058,10 +1058,11 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 	\subsection{Ground work}
 	In order to use the extreme value theory, in our case \textbf{POT} method, we need our data to be stationary, to ensure identical, and independent. To make data behave independent, we remove the smaller exceedances, if they are more then one closer then a certain number of days from each other. This lag is usually set to 3 or 5 days, depending on region and time of year. To make sure that the exceedances follows a \textbf{Poisson point process},the standard way is to consider data in cluster of a specific size and then only take the maximum if more then one observation within that cluster exceeds the threshold. This makes it important to pick a high enough threshold, since else a lot of our observations will be lost.
 	To ensure stationarity is more difficult and several approaches are used. One is to divide the data into seasons and use different thresholds for each season. The issue with this method is that we assume stationarity within each season and therefore can get unrealistic return values if there in fact is a trend in the data. If one knows that the data depends on other factors, such as the yield depends on temperature and rain, one can use a Box-Cox transformation on the data and then let the drift and trend parameter depend on these other paramters, so called \textbf{covariates}. This however requires that we know of these covariates, can estimate or already have models for how they affect our data and have measurments of these covariates over the same time period as our own data.\\
-	To investigate stationarity in our time serie, we first applied a decomposition on both the full time series and then on each season. This to look at trends both on an annual time scale but also on a seasonal one. By decomposing even the seasons we can remove influence on seasonality within each season, i.e we usually have a lot more rain in September then in November. To statisically check for stationarity, we used the \textbf{Augmented dickey-Fuller test} (ADF). Many uses \textbf{ManKendell}, but since this test only uses non ties and we have loads of zeroes in several seasons, it will not be very reliable (?). 
+	To investigate stationarity in our time serie, we first applied a decomposition on both the full time series and then on each season. This to look at trends both on an annual time scale but also on a seasonal one. By decomposing even the seasons we can remove influence on seasonality within each season, i.e we usually have a lot more rain in September then in November. This since looking at only one month at a time would lead to too little data to work with for the extreme analysis. To statisically check for stationarity, we aggregated the data into months for the full time series and yearly for the seasons. We then apply the Mann-Kendall test on the seasons, the seasonal Mann-Kendall on the full time series and lastly Sen's slope test on both the full and seasonal to confirm the MK test.
 	
 	\subsubsection{Time series analysis}
-	{\Large\textbf{HO}}: Figure \ref{tsHO} shows the trends for years and seasons. The only season that is showing some sort of trend is DJF, which seems to have a slight increasing trend. However, the scale is so small,that it is more or less neglectibe. SON is not showing a clear trend, but an increased volatility in the trend after 1995. There is a big volatilty in the JJA trend, suggesting that the rain in that season depends on some other process. MAM is the most steady season. All time series rejects the null hypothesis for the ADF test, hence suggesting that there is no unit root, i.e stationary. 
+	{\Large\textbf{HO}}: Figure \ref{tsHO} shows the trends for years and seasons. The only season that is showing some sort of trend is DJF, which seems to have a slight increasing trend. However, the scale is so small,that it is more or less neglectible. SON is not showing a clear trend, but an increased volatility in the trend after 1995. There is a big volatilty in the JJA trend, suggesting that the rain in that season depends on some other process. MAM is the most steady season. All time series rejects the null hypothesis for the ADF test, hence suggesting that there is no unit root, i.e stationary. 
+	The Mann-Kendall test confirms that DJF has an increasing trend on a 5\% level, but none of the other seasons and the sesonal MK test does not reject the null hypothesis.
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.6\textwidth}
@@ -1093,7 +1094,9 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 		\label{tsHO}
 	\end{figure}
 
-	{\Large\textbf{ADA}}: In figure \ref{tsADA} we can once again see that there is no clear trend on the annual time series, which the ADF test confirms. MAM has again the smoothest trend series with only one big dip around 1988, and there seems to be a decrease in the most extreme values. JJA is similarly to HO showing periodic behaviour indicating that there is some underlying process effecting the rain in this season. Cannot really detect a trend. SON shows a fairly flat trend graph, but an increase in extreme observations after some dry years between 1990-2000. DJF is also showing an increse in the amplitude of extreme values even if the number of extreme values is not clearly increasing. The tend graph is not flat mostly due to the fact that we nearly only have zero values.
+	{\Large\textbf{ADA}}: In figure \ref{tsADA} we can once again see that there is no clear trend on the annual time series, which the ADF test confirms. MAM has again the smoothest trend series with only one big dip around 1988, and there seems to be a decrease in the most extreme values. JJA is similarly to HO showing periodic behaviour indicating that there is some underlying process effecting the rain in this season. Cannot really detect a trend. SON shows a fairly flat trend graph, but an increase in extreme observations after some dry years between 1990-2000. DJF is also showing an increse in the amplitude of extreme values even if the number of extreme values is not clearly increasing. The trend graph is not flat mostly due to the fact that we nearly only have zero values.
+	Here the Mann-Kendall test gives the exact same result as for the other stations, there is a significant increase in DJF but not in any of the other seasons or for the overall time series.
+	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.6\textwidth}
@@ -1126,6 +1129,8 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 	\end{figure}
 
 	{\Large\textbf{KRA}}: Comparing fig \ref{tsKRA} with the two previous, we can see a lot of similarities. There is once again no trend in the full time series and it is somewhere between the behaviour of HO and ADA, with HO being much smoother and ADA more volitile. But for this station MAM and JJA are similarly smooth. MAM seems to have an increase in amplitude in extreme values, which is not visible in JJA. SON instead looks like it is having less exteme values, wheras DJF clearly has an increase both in number and amplitude in extreme values. All time series rejects the null hypothesis for the ADF test.
+	
+	Aggregating the data from daily to monthly, we can use the Mann-Kendall and seasonal Mann-Kendall on the data to quantitativly look at trends. The only season that shows a significant trend is DJF, which one should expect considering the increase in heavy rain. Both the seasonal and all other MK tests are insignificant. 
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.6\textwidth}
@@ -1168,7 +1173,129 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 	
 	{\Large\textbf{ADA}}: \textbf{MAM}: Same as above. \textbf{JJA}: Evidence on a 5\% level for an incresing trend. No evidence for a unit root, but significant autocorrelation up to 11 days lag and some linear pattern in plot of 1 day lag. \textbf{SON}: Strong evidence for an increasing trend, but not for a unit root. No significant autocorrelation. \textbf{DJF}: Evidence on 5\% level for an increase, but no evidence for unit root or autocorrelation.  
 	
+	\subsection{POT method}
+	Concluding that no seasons except DJF shows an increasing trend, we can apply the POT straight onto our data. One can of course argue wheater all data in a season is i.i.d since there still is a seasonality trend in there, but for the moment we choose to negect this. Fitting an extreme distribution to DJF is of no point, since we barely have any data to start with, which means that all of the positive data points are to be considered extreme cases. But since we see an increase both in number and intensity, their behaviour is interesting to model, perhaps in a linear regression setting.
+	
+	For the fitting of GPD (Pareto, $\xi > 0$), the following method will be used:
+	\begin{itemize}
+		\item Pick out the top 30\% of the data above 1 mm.
+		\item Smooth it to make it continuose.
+		\item Test for rough truncation. Choose suitable formulas depending on result.
+		\item Find the shape parameter using Hill, MLE and moments.
+		\item Fit the data to a GPD and confirm the suitability of the fit with a QQ-plot.
+		\item Find the end point and high quantiles. 
+	\end{itemize}
+	
+	\subsubsection{ADA}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{monAveADA.png}
+		\caption{Monthly averages}
+	\end{figure}
+	
+	For ADA, the maximum rainfall usually falls in June, so therefore the maximum value shoudl be found in that season. For now DJF will not be analysed since even if there is a trend in it, extremes in that season are still not real extremes. Analysing MAM, we cannot reject the null hypothesis about light truncation, so we will use the traditional POT method. Looking at ME plot, it looks like k=100 can be a suitable threshold which is roughly 20\% of the positive data. All methods agree that the shape parameter is around 0, MLE and MOM becomes negative after k=80. This suggests that there exists a finite end point. Applying the POT method with 100 exceedances gives a nearly perfect fit with $\xi = -0.11$, which gives a much better fit then the MLE fitted values, potentially because of the declustering procedure. Using p=0.0001 gives a quantile value of around 180. Plotting the exceedances show no trend pattern.
+	\begin{figure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{shapeADAMAM.pdf}
+			\caption{Shape estimation, MAM}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{potADAMAM.pdf}
+			\caption{POT fitting, $\xi = -0.11$}
+		\end{subfigure}
+	\end{figure}
 
+	For JJA, the shape paratmer seems to be positive, hence we can use all the tests for a pareto distribution. We do not reject the null for the MLE truncation test but for the other one. k=120 seems to be a suitable value judging on the ME plot, which is roughly 25\% of the positive data. Hill estimates $\xi = 0.5$ and allt the other $\xi = 0.25$. The regular POT method estimates $\xi = 0.06$ but also provides a relatively poor fit. No trend in the exceedances. Using the truncated end point estimation, we get a theoretical end point around 270, wheras if we use normal quantile estimation, p=0.0001 gives a value or 500, which clearly demonstrates the advantage of using the truncated Pareto distribution instead. 
+	
+	\begin{figure}[H]
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{shapeADAJJA.pdf}
+			\caption{Shape estimation, JJA}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{MEadaJJA.pdf}
+			\caption{ME plot}
+		\end{subfigure}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.3\textwidth}
+			\includegraphics[width=\linewidth]{potADAJJA.pdf}
+			\caption{POT estimation}
+		\end{subfigure}%
+		\begin{subfigure}{0.3\textwidth}
+			\includegraphics[width=\linewidth]{QQadaJJAPOTshape.pdf}
+			\caption{QQ plot,POT shape estimator}
+		\end{subfigure}%
+		\begin{subfigure}{0.3\textwidth}
+			\includegraphics[width=\linewidth]{TPaQQadaJJA.pdf}
+			\caption{TPa }
+		\end{subfigure}%
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{endTadaJJA.pdf}
+			\caption{End point estimaton}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{extQuanADAJJA.pdf}
+			\caption{p=0.0001}
+		\end{subfigure}
+	\end{figure}
+	
+	SON behaves rather unpredictable. The ME plot has a negative slope which would indicate a positive shape parameter, but all estimators except Hill estimates it to be around 0. For the MLE test, we reject the null hypothesis after k=50 but not before and we reject the null for the other test if k$<$50. The POT plot is once again a near perfect fit, and the residual plots looks straight, whereas the general QQ is not straight at all. The truncated pareto also seems to give a good fit. The end point is estimated to be 120. If using p=0.0001, there is massive volatility in the moment graph, wheras the rest are stable around 170. They agree with the endpoint for k upto 30. 
+	
+	\begin{figure}[H]
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{shapeADASON.pdf}
+			\caption{Shape estimation, SON}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{MEadaSON.pdf}
+			\caption{ME plot, SON}
+		\end{subfigure}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{trMLEadaSON.pdf}
+			\caption{MLE estimation}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{trTestADASON.pdf}
+			\caption{Hill estimator}
+		\end{subfigure}
+	\caption{Truncation test}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{potADASON.pdf}
+			\caption{POT estimation}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{TPaQQadaSON.pdf}
+			\caption{TPa }
+		\end{subfigure}%
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{endTadaSON.pdf}
+			\caption{End point estimaton}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{extQuanADASON.pdf}
+			\caption{p=0.0001}
+		\end{subfigure}
+	\end{figure}
+	
 	\section{Summary and conclusions}
 	Fitting daily rainfall data is of interest in all parts of the world sice it has a great impact on life from local to global scale. Several different methods and distributions has been proposed, and fitted with different level of success. Since the rain patterns differ between countries and seasons, different distributions are suitable in each case. To give more flexibility to the distribution, it has been proposed to mix two distribution from the same family, but with different parameters and then weight them with a probability parameter, so one part models the bulk of the data and the other one the tail, but without cutting of the data at some value. Two common practices to model the occurence of rainfall is either by a binomial distribution or by a Markov chain. In this report, I have looked at if it is possible to improve the distribution over daily rainfall amount by ignoring values that departs in the QQ plot, when the full data set is fitted. By plotting new QQ plots, I could conclude that we can get a much better graphical fit by doing this, but that the goodness-of-fit test only returned better p-values for some of the refitted distributions. For the unimodal group, I got a better fit for the transition months but a worse or unchanged p-value for the rainy months. For the bimodal group I instead got an improved fit for the rainier months and no improvment in the transition months. The greates improvment was obtained by fitting July and August to a Weibull distribution instead. Lastly I got an improved or unchanged fit for all months in the semimodal group by adding a capping value and once again a great improvment by fitting June to a Weibull distribution. The reason for the semi group to be improved in more months then the other groups could be that we have more extreme values in this region. 
 	\subsection{Further work}
