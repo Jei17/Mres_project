@@ -1193,45 +1193,65 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 		\caption{Monthly averages}
 	\end{figure}
 	
-	For ADA, the maximum rainfall usually falls in June, so therefore the maximum value shoudl be found in that season. For now DJF will not be analysed since even if there is a trend in it, extremes in that season are still not real extremes. Analysing MAM, we cannot reject the null hypothesis about light truncation, so we will use the traditional POT method. Looking at ME plot, it looks like k=100 can be a suitable threshold which is roughly 20\% of the positive data. All methods agree that the shape parameter is around 0, MLE and MOM becomes negative after k=80. This suggests that there exists a finite end point. Applying the POT method with 100 exceedances gives a nearly perfect fit with $\xi = -0.11$, which gives a much better fit then the MLE fitted values, potentially because of the declustering procedure. Using p=0.0001 gives a quantile value of around 180. Plotting the exceedances show no trend pattern.
+	For ADA, the maximum rainfall usually falls in June, so therefore the maximum value should be found in that season. For now DJF will not be analysed since even if there is a trend in it, extremes in that season are still not real extremes. Analysing MAM, we cannot reject the null hypothesis about light truncation, so we will use the traditional POT method. Looking at ME plot, it looks like k=50 can be a suitable threshold which is roughly 10\% of the positive data. All methods agree that the shape parameter is around 0, MLE and MOM becomes negative after k=80. This suggests that there exists a finite end point. Applying the POT method with 50 exceedances gives a nearly perfect fit with $\xi = -0.08$. Plotting the exceedances show no trend pattern.
 	\begin{figure}
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{shapeADAMAM.pdf}
-			\caption{Shape estimation, MAM}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shEstADAMAM.pdf}
+			\caption{Shape estimation}
 		\end{subfigure}%
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{potADAMAM.pdf}
-			\caption{POT fitting, $\xi = -0.11$}
-		\end{subfigure}
-	\end{figure}
-
-	For JJA, the shape paratmer seems to be positive, hence we can use all the tests for a pareto distribution. We do not reject the null for the MLE truncation test but for the other one. k=120 seems to be a suitable value judging on the ME plot, which is roughly 25\% of the positive data. Hill estimates $\xi = 0.5$ and allt the other $\xi = 0.25$. The regular POT method estimates $\xi = 0.06$ but also provides a relatively poor fit. No trend in the exceedances. Using the truncated end point estimation, we get a theoretical end point around 270, wheras if we use normal quantile estimation, p=0.0001 gives a value or 500, which clearly demonstrates the advantage of using the truncated Pareto distribution instead. 
-	
-	\begin{figure}[H]
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{shapeADAJJA.pdf}
-			\caption{Shape estimation, JJA}
-		\end{subfigure}%
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{MEadaJJA.pdf}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{MEadaMAM.pdf}
 			\caption{ME plot}
 		\end{subfigure}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shapeADAMAM.pdf}
+			\caption{Shape estimation}
+		\end{subfigure}
+	\caption{MAM}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
-		\begin{subfigure}{0.3\textwidth}
-			\includegraphics[width=\linewidth]{potADAJJA.pdf}
-			\caption{POT estimation}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot50ADAMAM.pdf}
+			\caption{POT estimation $\xi = -0.08$}
 		\end{subfigure}%
-		\begin{subfigure}{0.3\textwidth}
-			\includegraphics[width=\linewidth]{QQadaJJAPOTshape.pdf}
-			\caption{QQ plot,POT shape estimator}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{extQuanADAMAM.pdf}
+			\caption{Quantile estimation}
+		\end{subfigure}
+	\caption{MAM}
+	\end{figure}
+
+	For JJA, we once again use the largest 50 data points, and we appear to have a positive shape parameter, with the Hill estimator once again giving a much larger value compared to the other. The slightly lower value of MLE could be since the data has not been declustered. Using \textbf{POT} method we once again get a positive shape value, similar to the other estimator, wheras if we use the \textbf{GPDfit} function, also using MLE, we get a negative shape value, both if we decluster the data or not. I cannot find any reason for this, but since all other estimators get it to be positive, that seems most resonable. This would imply that we do not have a finite right end point. 
+	
+	\begin{figure}[H]
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shEstADAJJA.pdf}
+			\caption{Shape estimation}
 		\end{subfigure}%
-		\begin{subfigure}{0.3\textwidth}
-			\includegraphics[width=\linewidth]{TPaQQadaJJA.pdf}
-			\caption{TPa }
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{MEadaJJA.pdf}
+			\caption{ME plot}
+		\end{subfigure}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shapeADAJJA.pdf}
+			\caption{Shape estimation}
+		\end{subfigure}
+		\caption{JJA}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot50ADAJJA.pdf}
+			\caption{POT estimation, $\xi = 0.153$}
 		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{QQGFadaJJA.pdf}
+			\caption{QQ plot,MLE estimation}
+		\end{subfigure}
+		\caption{JJA}
 	\end{figure}
 
 	\begin{figure}[H]
@@ -1242,60 +1262,250 @@ If we leave the changes in extreme indicies and instead look at some extreme val
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
 			\includegraphics[width=\linewidth]{extQuanADAJJA.pdf}
-			\caption{p=0.0001}
+			\caption{Quantile estimation}
 		\end{subfigure}
+	\caption{JJA}
 	\end{figure}
 	
 	SON behaves rather unpredictable. The ME plot has a negative slope which would indicate a positive shape parameter, but all estimators except Hill estimates it to be around 0. For the MLE test, we reject the null hypothesis after k=50 but not before and we reject the null for the other test if k$<$50. The POT plot is once again a near perfect fit, and the residual plots looks straight, whereas the general QQ is not straight at all. The truncated pareto also seems to give a good fit. The end point is estimated to be 120. If using p=0.0001, there is massive volatility in the moment graph, wheras the rest are stable around 170. They agree with the endpoint for k upto 30. 
 	
 	\begin{figure}[H]
-		\begin{subfigure}{0.5\textwidth}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shEstADASON.pdf}
+			\caption{Shape estimation}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{MEadaSON.pdf}
+			\caption{ME plot}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[width=\linewidth]{shapeADASON.pdf}
-			\caption{Shape estimation, SON}
+			\caption{Shape estimation}
+		\end{subfigure}
+		\caption{SON}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot40ADASON.pdf}
+			\caption{40 points,$\xi = -0.06$}
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{MEadaSON.pdf}
-			\caption{ME plot, SON}
+			\includegraphics[width=\linewidth]{pot45ADASON.pdf}
+			\caption{45 points,$\xi = -0.204$}
 		\end{subfigure}
+		\caption{POT estimation, SON}
 	\end{figure}
+
+		\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{extQuan40ADASON.pdf}
+			\caption{40 points}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{extQuan45ADASON.pdf}
+			\caption{45 points}
+		\end{subfigure}
+		\caption{Extreme quantiles, SON}
+	\end{figure}
+	
+	\subsubsection{HO}
 
 	\begin{figure}[H]
 		\centering
+		\includegraphics[width=0.5\textwidth]{monAveHO.png}
+		\caption{Monthly averages}
+	\end{figure}
+	
+	Depending if we take the number of extremes to be 50 or 100 in MAM, we get very different behaviours, so therefore both cases will be investigated. Nothing interesting is happening around the 50th biggest value.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shEstHOMAM.pdf}
+			\caption{Shape estimation, MAM}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{MEhoMAM.pdf}
+			\caption{ME plot, MAM}
+		\end{subfigure}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shapeHOMAM.pdf}
+			\caption{Shape estimates, MAM}
+		\end{subfigure}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{trMLEadaSON.pdf}
+			\includegraphics[width=\linewidth]{trMLEhoMAM.pdf}
 			\caption{MLE estimation}
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{trTestADASON.pdf}
+			\includegraphics[width=\linewidth]{trTestHOMAM.pdf}
 			\caption{Hill estimator}
 		\end{subfigure}
-	\caption{Truncation test}
+		\caption{Truncation test}
 	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{potADASON.pdf}
-			\caption{POT estimation}
+			\includegraphics[width=\linewidth]{pot90HOMAM.pdf}
+			\caption{POT $\xi = 0.006$, 90 extremes}
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{TPaQQadaSON.pdf}
-			\caption{TPa }
-		\end{subfigure}%
-	\end{figure}
-	
-	\begin{figure}[H]
-		\centering
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{endTadaSON.pdf}
-			\caption{End point estimaton}
-		\end{subfigure}%
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=\linewidth]{extQuanADASON.pdf}
-			\caption{p=0.0001}
+			\includegraphics[width=\linewidth]{extQuanHOMAM.pdf}
+			\caption{p=$10^{-5}$}
 		\end{subfigure}
 	\end{figure}
 	
+	Since the truncation end point only can be estimated for values where we do not reject light truncation, we cannot use it. The top 55 points fits well to the POT model and there is a stable value for the shape parameter. This would indicate that we have a theoretical maximum value of 300, but if we instead take k $>60$ it is instead 240. 
+	
+	\begin{figure}[H]
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shEstHOJJA.pdf}
+			\caption{Shape estimation, JJA}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{MEhoJJA.pdf}
+			\caption{ME plot, JJA}
+		\end{subfigure}%
+			\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shapeHOJJA.pdf}
+			\caption{Shape estimation, JJA}
+		\end{subfigure}
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot40HOJJA.pdf}
+			\caption{POT $\xi = 0.04$, 40 extremes}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot60HOJJA.pdf}
+			\caption{POT $\xi = -0.06$, 60 extremes}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot100HOJJA.pdf}
+			\caption{POT, $\xi = 0.05$, 100 extremes }
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{pot110HOJJA.pdf}
+			\caption{POT, $\xi = -0.06$, 110 extremes }
+		\end{subfigure}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{exccHOJJA.pdf}
+			\caption{100 largest values}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{extQuanHOJJA.pdf}
+			\caption{p=$10^{-5}$}
+		\end{subfigure}
+	\end{figure}
+
+	JJA has a very similar pattern to MAM, which rejects light truncation for k $>$ 40 but not before. The endpoint estimator can once again not be used, since it only gives values for very small k. But here there seems to be an increasing trend in the extremes, which means that our maximum estimate will not be accurate for future scenarios. 
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shEstHOSON.pdf}
+			\caption{Shape estimation, SON}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{MEhoSON.pdf}
+			\caption{ME plot, SON}
+		\end{subfigure}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{shapeHOSON.pdf}
+			\caption{Shape estimates, SON}
+		\end{subfigure}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{pot40HOSON.pdf}
+			\caption{POT $\xi = 0.19$, 40 extremes}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{pot90HOSON.pdf}
+			\caption{POT $\xi = 0.009$, 90 extremes}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{extQuanHOSON.pdf}
+			\caption{p=$10^{-5}$}
+		\end{subfigure}
+	\end{figure}
+
+
+	\section{Simulated rain analysis}
+	\subsection{ADA}
+	\subsubsection{MAM}
+	Simulating from only a gamma distribution often gives a very similar plot to the observed data, some simulaions misses values above 100. The mean is within 0.15 of the correct one.
+	
+	\begin{table}[H]
+		\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Simulation & k & Thres & Trunc & POT shape \\
+		\hline
+		1 & 50 & 44.2 &  NO & 0.04 \\
+		2 & 50 & 40 & YES & -0.34 \\
+		3 & 75 & 35.2 & YES & -0.19 \\
+		4 & 50 & 41.7 & NO & 0.09 \\
+	\end{tabular}
+	\caption{Only gamma, no truncation}
+	\end{table}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{wgADAMAMme.pdf}
+			\caption{ME plot}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{wgADAMAMshape.pdf}
+			\caption{Shape estimation}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{wgADAMAMpot.pdf}
+			\caption{POT, $\xi =-0.57$}
+		\end{subfigure}%
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=\linewidth]{wgADAMAMq}
+			\caption{Quantiles}
+		\end{subfigure}
+	\caption{Only gamma, no truncation}
+	\end{figure}
+
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{wgADAMAMttNT.pdf}
+			\caption{No truncation}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{pot90HOSON.pdf}
+			\caption{Truncated at 90\%}
+		\end{subfigure}%
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[width=\linewidth]{extQuanHOSON.pdf}
+			\caption{Truncated at 99\%}
+		\end{subfigure}
+	\caption{Truncation}
+	\end{figure}
+	
+
 	\section{Summary and conclusions}
 	Fitting daily rainfall data is of interest in all parts of the world sice it has a great impact on life from local to global scale. Several different methods and distributions has been proposed, and fitted with different level of success. Since the rain patterns differ between countries and seasons, different distributions are suitable in each case. To give more flexibility to the distribution, it has been proposed to mix two distribution from the same family, but with different parameters and then weight them with a probability parameter, so one part models the bulk of the data and the other one the tail, but without cutting of the data at some value. Two common practices to model the occurence of rainfall is either by a binomial distribution or by a Markov chain. In this report, I have looked at if it is possible to improve the distribution over daily rainfall amount by ignoring values that departs in the QQ plot, when the full data set is fitted. By plotting new QQ plots, I could conclude that we can get a much better graphical fit by doing this, but that the goodness-of-fit test only returned better p-values for some of the refitted distributions. For the unimodal group, I got a better fit for the transition months but a worse or unchanged p-value for the rainy months. For the bimodal group I instead got an improved fit for the rainier months and no improvment in the transition months. The greates improvment was obtained by fitting July and August to a Weibull distribution instead. Lastly I got an improved or unchanged fit for all months in the semimodal group by adding a capping value and once again a great improvment by fitting June to a Weibull distribution. The reason for the semi group to be improved in more months then the other groups could be that we have more extreme values in this region. 
 	\subsection{Further work}
