@@ -5,7 +5,7 @@ MAM <- subset(x, month==3|month==4 |month==5)
 JJA <- subset(x, month==6|month==7|month==8)
 SON <- subset(x, month==9|month==10|month==11)
 
-e <- MAM$Data
+e <- JJA$Data
 
 #1 step Markov chain
 num_rn = 0
@@ -69,17 +69,23 @@ for (i in 2:(k-1)) {
 
 amount <- rgamma(k, shape = fit$estimate[2], scale=fit$estimate[1])
 
+amount <- amount*occurence
+
 for (i in 1:length(amount)){
-  if (amount[i]> z[50]){amount[i] <- rtgpd(1, gamma=pot$par.ests[1], mu =z[50], sigma=pot$par.ests[2], endpoint = qtgpd(0.99, gamma=pot$par.ests[1], mu=z[50], sigma=pot$par.ests[2], endpoint=Inf))}
+  if (amount[i]> z[50]){amount[i] <- rtgpd(1, gamma=pot$par.ests[1], mu =z[50], sigma=pot$par.ests[2], endpoint = qtgpd(0.9, gamma=pot$par.ests[1], mu=z[50], sigma=pot$par.ests[2], endpoint=Inf))}
   else {amount[i] <- amount[i]}
 }
+
+rainfall <- amount
+
+qtgpd(0.9, gamma=pot$par.ests[1], mu=z[50], sigma=pot$par.ests[2], endpoint=Inf)
 
 require(truncdist)
 tr.amount<- rtrunc(k, spec="gamma", shape=fit$estimate[2], scale=fit$estimate[1],b= qgamma(.9, shape=fit$estimate[2], scale=fit$estimate[1]))
 rainfall <- amount*occurence
 
 plot(rainfall)
-plot(MAM$Data)
+plot(JJA$Data)
 
 
 #Extreme analysis
@@ -91,7 +97,7 @@ y.pos1 <- subset(s, s >= 1)
 n1 <- floor(length(y.pos1)*0.3)
 MeanExcess(y.pos1[1:n1], plot=TRUE, k=TRUE)
 shape(y.pos1, models=30, start=30, end=n1)
-n1 <- 60
+n1 <- 40
 
 y_nn1 <- sort(s, decreasing = TRUE)
 v <- y_nn1[1:n1]
@@ -128,7 +134,12 @@ legend("bottomright", c("Hill", "genHill", "MLE", "MOM"), col = c(2, 3, 4, 5), l
 
 #GPD fit, non truncated
 fit.gpd <- GPDfit(v[1:48], start=c(0.1,1)) #MLE, gives really poor fit
-pot.w <-pot(s, threshold = v[40], run = 5) #at least 5 days between extremes
+pot.w <-pot(s, threshold = v[20], run = 5) #at least 5 days between extremes
+
+p=0.001
+tT <- trEndpointMLE(v[10:40], gamma=tM$gamma[10:40], tau = tM$tau[10:40], plot=TRUE)
+tMDT <- trDTMLE(v, gamma=tM$gamma, tau=tM$gamma, plot=TRUE)
+trQuantMLE(v[10:60], gamma=tM$gamma[10:60], tau = tM$tau[10:60],DT=tMDT$DT[10:60],p=p, plot=TRUE)
 
 
 #Quantiles
@@ -145,6 +156,9 @@ for (i in 1:length(pv)) {
   
 }
 
-plot(log10(pv), q.mle,type = "l", main= paste("Quantile estimation, thres=", signif(v[40], digits = 3)),xlab = "log p-value", ylab="Quantile", col = 2)
+plot(log10(pv), q.mle,type = "l", main= paste("Quantile estimation, thres=", signif(v[42], digits = 3)),xlab = "log p-value", ylab="Quantile", col = 2)
 lines(log10(pv), q.mom, col =3)
-legend("topright", c(paste("MLE", signif(g$gamma[40], digits=4)), paste("MOM", signif(M$gamma[40], digits = 4))),col =  c(2,3), lty=1)
+legend("topright", c(paste("MLE", signif(g$gamma[42], digits=4)), paste("MOM", signif(M$gamma[42], digits = 4))),col =  c(2,3), lty=1)
+
+fit.1 <- fitdist(y.pos1, distr = "gamma", method = "mle", lower= c(0,0), start = list(scale = 1, shape = 1))
+
