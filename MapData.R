@@ -9,12 +9,18 @@ day.mean <- c(13.13, 10.10, 10.33,11.27, 11.23, 9.77, 11.22, 11.75, 13.70, 12.29
 day.meann <- c(17.34, 13.12, 13.45, 14.64, 14.18, 14.39, 14.14, 14.12, 17.31, 15.01, 14.39, 14.28, 15.70, 14.64, 15.42, 14.84)
 rainmode <- c("Semi-bi", "Bi", "Bi", "Bi", "Bi", "Semi-bi", "Bi", "Bi", "Uni", "Uni", "Semi-bi", "Uni", "Uni", "Semi-bi", "Semi-bi", "Semi-bi")
 
-map.data <-data.frame(station, lon, lat, pos.obs, annual.mean, day.mean, rainmode)
+station.all <- c("AXM", "ODA", "KDA","KSI", "HO", "TDI", "SUN", "WEN", "KRA", "BOL", "SAL", "TLE", "NAV1", "ACC", "ADA", "TEM","BEK", "ABE", "SAL", "NAV", "AKA")
+included <- c(rep("Included", 16), rep("Not included", 5))
+lon.all <- c(lon, -2.33, 0.73, -0.01, -2.5, 0.8)
+lat.all <- c(lat, 6.2, 6.65, 9.45, 10.1, 6.11)
 
-sbbox <- make_bbox(lon=map.data$lon, lat=map.data$lat, f=0.45)
+map.data <-data.frame(station, lon, lat, pos.obs, annual.mean, day.mean, rainmode)
+map.data2 <- data.frame(station.all, lon.all, lat.all, included)
+
+sbbox <- make_bbox(lon=map.data2$lon.all, lat=map.data2$lat.all, f=0.45)
 sq_map <- get_map(location = sbbox, maptype = "terrain", source = "google")
 
 ggmap(sq_map) + 
-  geom_point(data = map.data, mapping = aes(x = lon, y = lat, color = rainmode), size = 9) + geom_text(data = map.data, aes(x = lon, y = lat, label = station, angle = 320, hjust = 0))
+  geom_point(data = map.data2, mapping = aes(x = lon.all, y = lat.all, color = included), size = 5) + geom_text(data = map.data2, aes(x = lon.all, y = lat.all, label = station.all, angle = 320, hjust = 0)) + scale_colour_manual(values = c("blue", "orange"))
 
 scale_colour_gradient(low = 'brown1', high = "blue") + 
