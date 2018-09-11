@@ -1,0 +1,329 @@
+\documentclass{beamer}
+\usetheme{Singapore}
+\title{Investigating the robustness of detecting truncation in rainfall data}
+%\subtitle{A story about extremes}
+\author{Jennifer Israelsson}
+\institute{University of Reading}
+\date{\today}
+
+\begin{document}
+	\begin{frame}
+	\titlepage
+	\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Background}
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+	\item Truncation exists in many places
+	\item Insurance for agriculture in developing countries
+	\item Estimate the maximum daily rainfall
+\end{itemize}
+\end{frame}
+
+\section{Extreme value theory}
+
+\begin{frame}
+\frametitle{Traditional vs extreme value statistics}
+\begin{itemize}
+	\item Traditional statistics
+		\begin{itemize}
+			\item Use all data
+			\item Most weight to the bulk of the data
+			\item Difficult to extrapolate
+		\end{itemize}
+	\item Extreme value statistics
+		\begin{itemize}
+			\item Only uses the most extreme data points
+			\item Not influenced by the bulk of the data 
+			\item Can extrapolate
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extreme value}
+\begin{itemize}
+	\item Block maxima method
+	\begin{itemize}
+		\item Use only the largest value in each block, e.g month or year
+		\item Wastes data
+	\end{itemize}
+	\item Peak over threshold (POT)
+		\begin{itemize}
+			\item Uses all data points over a given high threshold
+			\item Bias vs variance
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Peak over threshold, POT}
+\begin{itemize}
+	\item Given that we have found a suitable threshold \textit{u},
+	\begin{equation*}
+	F_u(x) = \mathbb{P}(X - u \leq x | X > u) = \frac{F(x + u) - F(u)}{1 - F(u)}
+	\label{excessdist}
+	\end{equation*}
+	\item Mean excess function,
+	\begin{equation*}
+	e(u) = \mathbb{E}(X - u | X > u)
+	\label{mefunc}
+	\end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{General Pareto distribution, GPD}
+\begin{itemize}
+	\item The distribution $F_u(x)$ converges to the \textit{General pareto distribution, GPD} as $ n \rightarrow \infty$
+	\begin{equation*}
+	G_{\xi, \nu, \sigma}(x) =
+	\begin{cases}
+	1-(1+\xi \frac{x-\nu}{\sigma})^{-1/\xi}, & \text{if} \ 1+\xi \frac{x-\nu}{\sigma} > 0, \quad \xi \neq 0 \\
+	1- e^{-\frac{x-\nu}{\sigma}}, & \text{if} \  \xi = 0
+	\end{cases}
+	\label{GPD}
+	\end{equation*}
+	\item $\xi$ is called the shape parameter
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Choose threshold}
+\begin{itemize}
+	\item Mean excess plot
+	\begin{equation*}
+	e(u) = \frac{\beta + \xi u}{1 - \xi}, \quad  u \in D(\xi,\beta),  \quad \xi < 1.
+	\end{equation*}
+	with,
+	\begin{equation*}
+	D(\xi, \beta) =
+	\begin{cases}
+	[0,\infty], & \text{if} \ \xi \geq 0 \\
+	[0, \frac{\beta}{\xi}], & \text{if} \ \xi < 0 \\
+	\end{cases}
+	\end{equation*}
+	\item Shape plot
+		\begin{figure}
+		\includegraphics[width=0.4\linewidth]{ShapeMid.pdf}
+	\end{figure}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Truncated distribution}
+\begin{itemize}
+	\item The unrestricted can lead to unphysical estimations
+	\item If truncated at $T > 0$, and $X =_d Y | Y < T$
+	\item Truncated POT
+	\begin{equation*}
+	\begin{split}
+	\mathbb{P}\left(\frac{X - t}{\sigma _t} > x | X > t\right) & = \mathbb{P}\left(\frac{Y - t}{\sigma _t} > x | t < Y < T\right) \\
+	& = \frac{\frac{\mathbb{P}(Y > t+x\sigma _t )}{\mathbb{P}(Y>t)} -  \frac{\mathbb{P}(Y > T)}{\mathbb{P}(T > t)}}{1 - \frac{\mathbb{P}(Y > T)}{\mathbb{P}(T>t)}}
+	\end{split}
+	\label{tPOT}
+	\end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Goodness-of-fit test}
+\begin{itemize}
+	\item Different truncations
+	\begin{itemize}
+		\item Rough truncation with the threshold $t = t_n$
+			\begin{equation*}
+			\frac{T - t}{\sigma_t} \rightarrow \kappa > 0
+			\label{RoughTru}
+			\end{equation*}
+			\begin{equation*}
+			\frac{\mathbb{P}(Y > T)}{\mathbb{P}(Y > t)} \rightarrow (1+ \xi \kappa)^{-1/\xi}
+			\end{equation*}
+		\item Light truncation with the threshold $t= t_n$ :
+		\begin{equation*}
+		\frac{\mathbb{P} (Y > T)}{\mathbb{P}(Y>t)} \rightarrow 0
+		\label{LightTru}
+		\end{equation*}	
+	\end{itemize}
+	\item Goodness-of-fit test
+	\begin{equation*}
+	T_{k,n} := k(1 + \hat{\tau}_k E_{1,k})^{-1/\hat{\xi}_k} > \text{log}(1/q)
+	\label{gofTest}
+	\end{equation*}
+\end{itemize}
+\end{frame}
+
+\section{Weather generator}
+
+\begin{frame}
+\frametitle{Rainfall data}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{itemize}
+		\item Used measured rainfall data to tune the weather generator
+		\item One station and season used 
+		\item Stationarity analysis
+	\end{itemize}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/mapRainmode.pdf}
+		\caption{Rainmode distribution}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Construction}
+\begin{itemize}
+	\item One-step Markov chain for occurence
+	\begin{itemize}
+		\item e.g  probability of rain after rainy day 
+	\end{itemize}
+	\item Gamma distribution for bulk of data
+	\begin{equation*}
+	f(x ; \alpha, \theta) = \frac{x^{\alpha-1} e^{-\frac{x}{\theta}}}{\theta^\alpha \Gamma(\alpha)}, \quad x > 0
+	\end{equation*}
+	\item GPD for extremes
+	\item Mixed distribution 
+	\begin{equation*}
+	F(x)= F(u) \mathbb{P}(X \leq x | X \leq u) + (1-{F(u)}) \mathbb{P}(X \leq x | X > u)
+	\end{equation*}
+\end{itemize}	
+\end{frame}
+
+\section{Results}
+
+\begin{frame}
+\frametitle{Simulation study}
+Using the 100 largest values and estimating the endpoint with the 0.9999 quantile of the GPD and a  positive $\xi$.
+\begin{figure}
+	\includegraphics[width=0.7\linewidth]{images/SimADAJJAk100.pdf}
+	\caption{Base setup}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Simulation study}
+Using the 0.999 quantile and the 0.99999 quantile as the endpoint
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/SimADAJJA999.pdf}
+		\caption{0.999}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/SimADAJJA99999.pdf}
+		\caption{0.99999}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Simulation study}
+Changing the parameterisation of the gamma distribution and GPD
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/SimKRAJJAk140.pdf}
+		\caption{$\xi < 0$}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/SimHOJJAk150.pdf}
+		\caption{$\xi = 0$}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Case study, South}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/ShapeSouth.pdf}
+		\caption{Shape plot}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/MESouth.pdf}
+		\caption{Mean excess plot}
+	\end{figure}	
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Case study, South}
+\begin{figure}
+	\includegraphics[width=0.6\linewidth]{images/trTestSouth.pdf}
+	\caption{Truncation test}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\tiny
+	\begin{tabular}{|c c c c c c c c c c|}
+		\hline
+		243.9 & 205.7 & 160.3 & 157.2 & 129.4 & 123.3 & 122.0 & 119.7 & 113.7 & 110.8 \\
+		\hline
+	\end{tabular}
+	\caption{Top ten values}
+	\label{Top10South}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Case study, North}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/ShapeNorth.pdf}
+		\caption{Shape plot}
+	\end{figure}
+	\column{0.5\linewidth}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/MENorth.pdf}
+		\caption{Mean excess plot}
+	\end{figure}	
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Case study, North}
+\begin{figure}
+\includegraphics[width=0.6\linewidth]{images/trTestNorth.pdf}
+\caption{Truncation test}
+\end{figure}
+\begin{table}[H]
+\centering
+\tiny
+\begin{tabular}{|c c c c c c c c c c|}
+	\hline
+	152.2 & 150.8 & 150.6 & 149.0 & 146.8 & 132.9 & 132.4 & 130.1 & 125.1 & 122.0\\
+	\hline
+\end{tabular}
+\caption{Top ten values}
+\label{Top10South}
+\end{table}
+\end{frame}
+
+\section{Conclusions}
+
+\begin{frame}
+\frametitle{Conclusions}
+\begin{itemize}
+	\item A sample size of at least 3000 is needed for accurate detection
+	\item The endpoint estimator has a big impact on the performance
+	\item Independent of the sign of the shape parameter around 0
+	\item There seems to exist a maximum value on convective rainfall in the north of Ghana
+\end{itemize}
+\end{frame}
+
+
+\end{document}
